@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-05 12:23:30
+<?php /* Smarty version 2.6.28, created on 2017-04-05 14:29:51
          compiled from single/rczpjl.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/rczpjl.html', 121, false),array('function', 'single', 'single/rczpjl.html', 139, false),)), $this); ?>
@@ -244,6 +244,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                     </div>
                 </div>
                 <input type='hidden' name='id' value=8 />
+                    <div style="height: 10px;"></div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <input type='submit' value='提交' name='dyFormSub' class="quedingtijiao btn btn-default" />
