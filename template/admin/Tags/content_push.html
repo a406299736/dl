@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#changeTags li span').click(function(){
+		var v = $(this).text();
+		var is = !!$(this).attr('class');
+		var parent = $(opener.document).find('#tagsname');
+		var parentVal = parent.val();
+		if(is){//移除
+			$(this).removeClass('curr');
+			var newval = (parent.val().replace(v,'')).replace(/,,/g,',').replace(/^,/g,'').replace(/,$/g,'');
+			parent.val(newval);
+		}else{//增加
+			if(parentVal){
+				parent.val(parentVal+','+v);
+			}else{
+				parent.val(v);
+			}
+			$(this).addClass('curr');
+		}
+	})
+})
+</script>
+</head>
+
+<body>
+<div class="mainBox">
+  <div class="mainList" id="allcheckbox">
+    <div class="contentListSearchBox">
+    <form action="" method="get">
+      <p style="text-align:left;">搜索Tags：
+        <input type="text" class="inputText inputText1" name="name" id="name" placeholder="输入Tags名字" value='' />
+        <input type="hidden" name="m" value="Tags" />
+        <input type="hidden" name="a" value="contentListTags" />
+        <input type="hidden" name="is_name" value="<{$is_name}>" />
+        <input type="submit" name="searchTagsSub" id="searchTagsSub" class="inputSub1" value="搜索" /> <input class="inputSub1" type="button" value="关闭窗口" onclick="closeSelect();" />
+      </p>
+    </form>
+    </div>
+    <div class="contentTagsList">
+    	<ul id="changeTags">
+        	<{foreach from=$list item=v}>
+        	<li><span<{if $v.checked}> class='curr'<{/if}>><{$v.name}></span></li>
+            <{/foreach}>
+        </ul>
+    </div>
+    <div class="page"><{$page}></div>
+  </div>
+</div>
+</body>
+</html>

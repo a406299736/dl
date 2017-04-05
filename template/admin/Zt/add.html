@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript" src="template/admin/js/zt.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+	<li><a href="?m=Zt&a=index">专题管理</a></li>
+	<li><span>&gt;</span></li>
+	<li>增加专题</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainForm" id="mainForm">
+        <form action="?&m=Zt&a=add" method="post" name="form1" onsubmit="return checkZt();">
+    	<table cellpadding="0" border="0" cellspacing="0">
+            <tr>
+            	<td align="right" width="12%">专题名称：</td>
+            	<td width="88%"><input type="text" class="inputText inputWidth" name="name" id="name" /></td>
+            </tr>
+            <tr>
+            	<td align="right">选择模板：</td>
+                <td><select name="tem" id="tem">
+                <{foreach from=$tem item=v}>
+                <option value="<{$v}>"><{$v}></option>
+                <{/foreach}>
+                </select></td>
+            </tr>
+            <tr>
+            	<td align="right">专题目录</td>
+                <td><span id="spanInput" class="spanInputText curr">根目录/</span><input type="text" class="inputText spanInput inputWidth" name="path" id="path" /> <input type="button" class="inputSub1" id="scDir" value="生成拼音目录" /> <input type="button" class="inputSub1" value="检查目录是否存在" id="isDir" /><span class="succ">由字母、数字、下划线、“/”构成</span></td>
+            </tr>
+        	<tr>
+            	<td align="right">是否为分页列表：</td>
+            	<td><label for="islist1"><input type="radio" name="islist" checked="checked" value="1" id="islist1" />是</label> <label for="islist0"><input type="radio" id="islist0" name="islist" value="0" />否</label> <span class="succ">是：专题页面支持数据分页，否：专题页面为封面页、专题首页，不支持数据分页</span></td>
+            </tr>
+            <tr>
+            	<td align="right">每页显示信息：</td>
+                <td><input type="text" name="pagenum" value="10" class="inputText" style="width:30px; text-align:center;" /></td>
+            </tr>
+            <tr>
+            	<td align="right">专题图片：</td>
+                <td><input type="text" name="images" id="images" class="inputText inputWidth" /> <input type="button" class="inputSub1" value="选择图片" onclick="selectUpload(1,'file/zt','images');" /></td>
+            </tr>
+            <tr>
+            	<td align="right">前台是否隐藏：</td>
+                <td><input type="checkbox" name="display" value="1" /> <span class="succ">隐藏后 前台标签调用不到该专题</span></td>
+            </tr>
+            <tr>
+                <td width="12%" align="right">绑定域名：</td>
+                <td width="88%"><input type="text" name="domain" class="inputText" value="" /> <span class="succ">http://开头 需要解析域名配合，不懂请留空</span></td>
+            </tr>
+            <tr>
+                <th colspan="2">SEO设置</th>
+            </tr>
+            <tr>
+            	<td width="12%" align="right">网页标题：</td>
+            	<td width="88%"><input type="text" class="inputText inputWidth" name="title" id="title" /> <span class="succ">META Title</span> <span class="hui">最多255个字符</span></td>
+            </tr>
+            <tr>
+            	<td align="right">网页关键词：</td>
+            	<td><input type="text" class="inputText inputWidth" name="keywords" id="keywords" /> <span class="succ">META Keywords</span> <span class="hui">关键词以“,”号隔开</span></td>
+            </tr>
+            <tr>
+            	<td align="right">网页描述：</td>
+            	<td><textarea class="textarea" name="description"></textarea> <span class="succ">META Description <span class="hui">针对搜索引擎设置的网页描述</span></span></td>
+            </tr>
+            <tr>
+            	<td width="12%" align="right">排序：</td>
+            	<td width="88%"><input type="text" value=0 class="inputText" style="width:30px; text-align:center;" name="sort" /> <span class="succ">值越大排序越前</span></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td><input type="hidden" name="backurl" value="<{$backurl}>" /><input type="submit" value="提交" name="add" class="inputSub" id="add" /></td>
+            </tr>
+       </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript" src="template/admin/js/content.js"></script>
+<script type="text/javascript" src="template/admin/js/caiji.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=index">节点管理</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=manage&id=<{$jdData.id}>">采集【<{$jdData.name}>】管理</a></li>
+	<li><span>&gt;</span></li>
+    <li>创建采集</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainForm" id="mainForm">
+        <form action="?&m=Acquisi&a=saveCaiji" method="post" name="form1" onsubmit="return checkAddCaiji();">
+    	<table cellpadding="0" border="0" cellspacing="0">
+        	<tr>
+            	<th colspan="2">基本设置</th>
+            </tr>
+            <tr>
+            	<td align="right" width="25%">采集名字：</td>
+            	<td><input type="text" class="inputText inputWidth" name="lname" id="lname" /></td>
+            </tr>
+            <tr>
+            	<td align="right">入库栏目：</td>
+                <td><select name="classid" id="classid">
+                <{foreach from=$allclass item=v}>
+                <{if $v.classtype==0 && $v.mid == $jdData.mid}>
+                <option value="<{$v.classid}>"><{$v.classname}></option>
+                <{/if}>
+                <{/foreach}>
+                </select></td>
+            </tr>
+            <tr>
+            	<td align="right">自定义目标列表采集地址：</td>
+                <td><textarea class="textarea" name="list_dy_url"></textarea> <span class="succ">自定义地址 一行一条</span></td>
+            </tr>
+            <tr>
+            	<td align="right">系统生成目标列表采集地址：<br /><span class="hui">(系统生成列表地址)</span></td>
+                <td><div class="caiji_li">
+                <ul>
+                	<li><span class="hui">如果目标列表地址过于复杂，请用上面的自定义地址列表</span></li>
+                	<li>目标列表地址模板 <input type="text" name="list_url_tem" id="list_url_tem" class="inputText inputWidth" /><span class="succ"> 分页变量用 [page] 替换</span><br /><span class="hui">静态地址如：http://www..com/down/index[page].html <br />动态地址如：http://www..com/index.php?m=list&amp;a=index&amp;classid=18[page]</span></li>
+                    <li>页码从 <input type="text" class="inputText" style="width:30px; text-align:center;" name="start_page" value="1" id="start_page" /> 到 <input type="text" value="10" class="inputText" style="width:30px; text-align:center;" name="end_page" id="end_page" /> 页码间隔倍数 <input type="text" value="1" class="inputText" style="width:30px; text-align:center;" name="jg_page" id="jg_page" /> <label for="desc_page"><input type="checkbox" value="1" name="desc_page" id="desc_page" />页码倒序</label> <label for="remove_page_fix"><input type="checkbox" name="remove_page_fix" id="remove_page_fix" value="1" /> 第一页去掉页码 <span class="succ">一般静态地址第一页没有页码</span></label></li>
+                    <li>页码前面加字符 <input type="text" name="pre_page" id="pre_page" class="inputText" style="width:70px; text-align:center;" /> 页码后面加字符 <input type="text" name="fix_page" id="fix_page" class="inputText" style="width:70px; text-align:center;" /><br /><span class="hong">静态地址一般前面会有一个（_）下划线 动态地址前面会有（&amp;page=）类似这样的字符</span></li>
+                    <li><input type="button" class="inputSub1" onclick="testCjurl();" value="采集目标列表地址测试" /></li>
+                </ul>
+                </div></td>
+            </tr>
+            <tr>
+            	<td align="right">目标列表页面中内容链接地址区域正则：</td>
+                <td><textarea class="textarea" style="width:300px;" name="content_url_box" id="content_url_box"></textarea> <span class="succ">[-content_url_box-] 代表内容链接地址区域 * 代表任何字符</span><br /><span class="hui">如：&lt;div class="list_box"&gt;内容页面地址区域&lt;/div&gt;&lt;div class="page"&gt;...其他的一些代码&lt;/div&gt;<br />那么正则就是 &lt;div class="list_box"&gt;[-content_url_box-]&lt;div class="page"&gt;</span></td>
+            </tr>
+            <tr>
+            	<td align="right">目标列表页面中内容页面地址正则：</td>
+                <td><textarea class="textarea" style="width:300px;" name="content_url_regular" id="content_url_regular"></textarea> <span class="succ">[-url-] 代表链接地址 * 代表任何字符</span><br /><span class="hui">如：&lt;li&gt;&lt;a href="http://www..com/down/xitong/20140924/10.html"&gt;梦想cms（）1.3版本下载&lt;/a&gt;&lt;/li&gt;<br />那么正则就是 &lt;a href="[-url-]"</span><br /><br /><input class="inputText inputWidth" type="text" placeholder="输入列表地址测试获取内容地址" id="test_list_url" /> <input type="button" class="inputSub1" value="测试提取内容页面地址" onclick="testList_a();" /></td>
+            </tr>
+            <tr>
+            	<td align="right">备注</td>
+                <td><textarea class="textarea" name="lcontent"></textarea></td>
+            </tr>
+            <tr>
+            	<th colspan="2">采集选项</th>
+            </tr>
+            <tr>
+            	<td align="right">采集信息数量：</td>
+                <td><input type="text" class="inputText" style="width:40px; text-align:center;" name="num" value="0" /> <span class="succ">如果为 0 则采集全部</span></td>
+            </tr>
+            <tr>
+            	<td align="right">采集每条数据间隔时间：</td>
+                <td><input type="text" class="inputText" style="width:40px; text-align:center;" name="time_jg" value="0" /> <span class="succ">单位：秒，此功能可有效过掉对方的短时间大量请求限制</span></td>
+            </tr>
+            <tr>
+            	<td align="right">提取标题分词为Tags：</td>
+                <td><label for="is_fenci_tags"><input type="checkbox" value="1" name="is_fenci_tags" id="is_fenci_tags" /> 是</label></td>
+            </tr>
+            <tr>
+            	<td align="right">入库时增加Tags：</td>
+                <td><textarea class="textarea" name="tagsname" id="tagsname"></textarea> <input type="button" value="选择Tags" class="inputSub1" onclick="changeTags();" /> <span class="succ">可以直接填写Tags名字，多个以英文逗号“,”隔开</span><br /><span class="hui">该处与上面的Tags不冲突</span></td>
+            </tr>
+            <tr>
+            	<td align="right">入库时推送此信息为专题：</td>
+                <td><input type="text" name="ztid" id="ztid" class="inputText inputWidth" /> <input type="button" value="选择专题" class="inputSub1" onclick="add_pushzt()" /> <span class="succ">可以直接填写专题id，多个专题用“,”逗号隔开</span></td>
+            </tr>
+            <tr>
+            	<td align="right">字符替换：</td>
+                <td><textarea name="str_y_replace" class="textarea" style="width:200px;"></textarea> 替换成 <textarea name="str_n_replace" class="textarea" style="width:200px;"></textarea><br /><span class="succ">原字符和新字符如果是多个，用（,）英文状态下逗号间隔开，并且俩边的字符个数要对等</span></td>
+            </tr>
+            <tr>
+            	<td align="right">字符删除正则：</td>
+                <td><textarea name="str_remove" class="textarea"></textarea> <span class="succ">一行一条&nbsp;
+                &nbsp; * 代表任何字符</span><br /><span class="hui">如正则为：&lt;div class="box"&gt;*&lt;/div&gt; 即可清除整个该div，包括里面的内容 <b>也可以直接填写要删除的字符串</b></span></td>
+            </tr>
+            <tr>
+            	<td align="right">清理正文中的标签：</td>
+                <td>
+                <label for="remove_html1"><input type="checkbox" id="remove_html1" name="remove_html[iframe]" value="1" />iframe</label>
+                <label for="remove_html2"><input type="checkbox" id="remove_html2" name="remove_html[span]" value="1" />span</label>
+                <label for="remove_html10"><input type="checkbox" id="remove_html10" name="remove_html[b]" value="1" />b</label>
+                <label for="remove_html3"><input type="checkbox" id="remove_html3" name="remove_html[script]" value="1" />script</label>
+                <label for="remove_html4"><input type="checkbox" id="remove_html4" name="remove_html[style]" value="1" />style</label>
+                <label for="remove_html5"><input type="checkbox" id="remove_html5" name="remove_html[strong]" value="1" />strong</label>
+                <label for="remove_html6"><input type="checkbox" id="remove_html6" name="remove_html[table]" value="1" />table</label>
+                <label for="remove_html7"><input type="checkbox" id="remove_html7" name="remove_html[font]" value="1" />font</label>
+                <label for="remove_html8"><input type="checkbox" id="remove_html8" name="remove_html[img]" value="1" />img</label>
+                <label for="remove_html9"><input type="checkbox" id="remove_html9" name="remove_html[a]" value="1" />a</label><br /><span class="succ">注意： span、strong、b、font、a 这些标签系统会保留标签里面的内容，其他标签会删除标签里面内容</span>
+                </td>
+            </tr>
+            <tr>
+            	<td align="right">内容页面是否有分页：</td>
+                <td><label for="is_info_page"><input type="checkbox" value="1" id="is_info_page" name="is_info_page" /> 是</label></td>
+            </tr>
+            <tr>
+            	<td align="right">内容分页地址正则：</td>
+                <td><div class="caiji_li">
+                	<ul>
+                    	<li><textarea class="textarea" name="info_page_regular" id="info_page_regular"></textarea> <span class="succ">[-info_page_box-] 代表分页地址区域 * 代表任何字符</span><br /><span class="hui">如：&lt;div class='content_page'&gt;[-info_page_box-]&lt;div class='other'&gt; 系统会自动获取该区域里面的 a 标签链接 如果分页不是a标签形式，则无法采集分页</span></li>
+                        <li><input id="testContentPageUrl" type="text" placeholder="输入内容页面地址进行测试" class="inputText" style="width:400px;" /><input type="button" class="inputSub1" onclick="testContentPage();" value="测试采集内容分页地址" /></li>
+                    </ul>
+                </div></td>
+            </tr>
+            <tr>
+            	<th colspan="2">内容字段提取正则</th>
+            </tr>
+            <tr>
+            	<td align="right">标题正则：</td>
+                <td><textarea class="textarea" name="fieldData[title][regular]"></textarea> <span class="succ">截取区域用 [-lmx_title-] 替换 * 代表任何字符</span><br /><input type="text" class="inputText" name="fieldData[title][default]" /> <span class='hui'>填写此处则为该字段的值 该值优先级最高</span></td>
+            </tr>
+            <tr>
+            	<td align="right">网页关键字正则：</td>
+                <td>
+                <div class="caiji_li">
+                	<li><textarea class="textarea" name="fieldData[keywords][regular]"></textarea> <span class="succ">截取区域用 [-lmx_keywords-] 替换 * 代表任何字符</span></li>
+                    <li><label id="is_fenci_keywords"><input type="checkbox" value="1" name="fieldData[keywords][is_fenci]" id="is_fenci_keywords" /> 提取标题分词为网页关键字</label></li>
+                    <li><input type="text" class="inputText" name="fieldData[keywords][default]" /> <span class='hui'>填写此处则为该字段的值 该值优先级最高</span></li>
+                </div></td>
+            </tr>
+            <tr>
+            	<td align="right">网页描述正则：</td>
+                <td>
+                <div class="caiji_li">
+                	<li><textarea class="textarea" name="fieldData[description][regular]"></textarea> <span class="succ">截取区域用 [-lmx_description-] 替换 * 代表任何字符</span></li>
+                    <li><label for="is_content_description"><input type="checkbox" value="1" name="fieldData[description][is_content]" id="is_content_description" /> 提取正文第一段为网页描述</label></li>
+                    <li><input type="text" class="inputText" name="fieldData[description][default]" /> <span class='hui'>填写此处则为该字段的值 该值优先级最高</span></li>
+                </div></td>
+            </tr>
+            <tr>
+            	<td align="right">发布时间：</td>
+                <td><label for="is_time"><input type="checkbox" checked="checked" name="fieldData[time][istime]" id="is_time" value="1" /> 发布时间为入库时间</label>&nbsp;&nbsp;<input type="text" class="inputText" style="width:150px;" name="fieldData[time][str]" id="lmx_time" /> <input type="button" value="点击填入当前时间" onclick="document.getElementById('lmx_time').value='<{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}>'" class="inputSub1" /></td>
+            </tr>
+            <{foreach from=$fieldArr item=v}>
+            <tr>
+            	<td align="right"><{$v.ftitle}>正则：</td>
+                <td>
+                <div class="caiji_li">
+                	<ul>
+                    	<li><textarea class="textarea" name="fieldData[<{$v.fname}>][regular]"></textarea> <span class="succ">截取区域用 [-lmx_<{$v.fname}>-] 替换 * 代表任何字符</span></li>
+                        <{if $v.ftype == 'image' ||  $v.ftype == 'moreimage'}>
+                        <li><label for="lmx_<{$v.fname}>_is_bendi"><input type="checkbox" value="1" name="fieldData[<{$v.fname}>][is_bendi]" id='lmx_<{$v.fname}>_is_bendi' />入库保存本地</label></li>
+                        
+                        <{/if}>
+                        <{if $v.ftype == 'editor' || $v.ftype == 'moreimage' || $v.ftype == 'morefile'}>
+                        <li>
+                        <label><input type="checkbox" checked="checked" name="fieldData[<{$v.fname}>][is_for]" value=1 />如果内容页面有分页则重复采集该处内容</label></li>
+                        <{/if}>
+                        <{if $v.ftype == 'editor'}>
+                        <li><label><input type="checkbox"<{if $array[$v.fname].is_editimg_bendi}> checked<{/if}>  name="fieldData[<{$v.fname}>][is_editimg_bendi]" value='1' />内容中的图片保存本地</label></li>
+                        <{/if}>
+                        <{if $v.ftype == 'image'}>
+                        <li><label><input type="checkbox" name="fieldData[<{$v.fname}>][boxoneimage]" value=1 />截取区域中第一张图片</label></li>
+                        <{/if}>
+                        <{if $v.ftype == 'moreimage'}>
+                        <li><label><input type="checkbox" name="fieldData[<{$v.fname}>][boximg]" value=1 />截取区域中所有图片</label></li>
+                        <{/if}>
+                        <{if $v.ftype == 'image' ||  $v.ftype == 'moreimage'}>
+                        <li><label><input type="checkbox" name="fieldData[<{$v.fname}>][water]" value='1' />加水印 <span class="hui">（保存本地有效）</span></label>
+                        </li>
+                        <li><label><input type="checkbox" name="fieldData[<{$v.fname}>][is_cutting]" />从图片下面裁剪图片</label> <input type="text" name="fieldData[<{$v.fname}>][cutting_px]" class="inputText" style="width:50px; text-align:center;" value="0" /> 像素 <span class="hui">图片保存本地有效 有的网络图片可能在图片的下面有水印，该功能可以裁剪掉水印部分</span></li>
+                        <li><label><input type="checkbox" value="1" name="fieldData[<{$v.fname}>][is_maxWidth]" />限制图片最大宽度</label> <input type="text" name="fieldData[<{$v.fname}>][maxWidth]" class="inputText" style="width:50px; text-align:center;" value="0" /> 像素 <span class="hui">图片保存本地有效 可以有效减小图片体积</span></li>
+                        <li><label><input type="checkbox" value="1" name="fieldData[<{$v.fname}>][is_small]" />生成缩略图<span class="hui">(保存本地有效<{if $v.ftype == 'moreimage'}> 前台调用缩略图在图片名字前面加上small_<{/if}>)</span></label> 宽度 <input type="text" class="inputText" name="fieldData[<{$v.fname}>][small_width]" value="<{$public.small_width}>" style="width:50px; text-align:center;" /> 高度 <input type="text" class="inputText" value="<{$public.small_height}>" name="fieldData[<{$v.fname}>][small_height]" style="width:50px; text-align:center;" /> <label><input type="checkbox" value="1" name="fieldData[<{$v.fname}>][small_bili]" />根据宽度保持比例</label> </li>
+                        <{/if}>
+                        <li><input type="text" class="inputText" name="fieldData[<{$v.fname}>][default]" /> <span class='hui'>填写此处则为该字段的值 该值优先级最高</span></li>
+                    </ul>
+                </div></td>
+            </tr>
+            <{/foreach}>
+            <tr>
+            	<td></td>
+                <td><input type="hidden" name="uid" value='<{$jdData.id}>' /><input type="hidden" name="backurl" value="<{$backurl}>" /><input type="submit" value="提交" name="addCaiji" class="inputSub" id="addCaiji" /></td>
+            </tr>
+       </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

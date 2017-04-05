@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript" src="template/admin/js/zt.js"></script>
+<script type="text/javascript">
+$(function(){
+	zt_ajax_get(1);
+	$('#searchZtSub').click(function(){
+		var key = $('#name').val();
+		zt_ajax_get(1,key);
+	})
+	//增加一条
+	$('.add_zt').live('click',function(){
+		var name = $(this).parent('td').find('.change_name').val();
+		var id = $(this).parent('td').find('.change_id').val();
+		addone(name,id);
+	})
+	//增加全部
+	$('#change_all').live('click',function(){
+		$('.add_zt').each(function(){
+			var name = $(this).parent('td').find('.change_name').val();
+			var id = $(this).parent('td').find('.change_id').val();
+			addone(name,id);
+		})
+	})
+	//移除
+	$('.zt_change_remove').live('click',function(){
+		$(this).parents('tr').remove();
+	})
+	
+	//确定选择
+	$('#ok_change_id').live('click',function(){
+		var id = '';
+		$('.zt_change_remove').each(function(){
+			id += $(this).attr('data-id')+',';
+		})
+		id = id.substring(0,id.length-1);
+		$(opener.document).find('#ztid').val(id);
+		closeSelect();//关闭窗口
+	})
+})
+
+</script>
+</head>
+
+<body>
+<div class="mainBox">
+  <div class="mainList" id="allcheckbox">
+    <div class="contentListSearchBox">
+      <p style="text-align:left;">搜索专题：
+        <input type="text" class="inputText inputText1" name="name" id="name" placeholder="输入专题名字" value='' />
+        <input type="hidden" name="m" value="Zt" />
+        <input type="hidden" name="a" value="ajax_search" />
+        <input type="submit" name="searchSub" id="searchZtSub" class="inputSub1" value="搜索" />
+      </p>
+    </div>
+    <div class="changeZtbox">
+      <div class="changeZtbox_l">
+        <div class="changeZtboxH">
+          <h1>专题列表</h1>
+          <table cellpadding="0" cellspacing="1" border="0" id="zt_all_list">
+            <tr>
+              <th width="20%">专题ID</th>
+              <th width="60%">专题名称</th>
+              <th width="20%">选择</th>
+            </tr>
+            <tr>
+            	<td colspan="3" style=" text-align:center;"><img src="template/admin/img/load.gif" /></td>
+            </tr>
+          </table>
+          <div style="text-align:center; padding:5px 0px;"><input type="button" id="display_all" onclick="zt_ajax_get(1);" class="inputSub1" value="显示全部" /><input type="button" class="inputSub1" id="change_all" value="增加全部" /></div>
+          <div class="page" id="page"></div>
+        </div>
+      </div>
+      <div class="changeZtbox_r">
+        <div class="changeZtboxH">
+          <h1>已选择的专题</h1>
+          <table cellpadding="0" cellspacing="1" border="0" id="zt_change_list">
+            <tr>
+              <th width="20%">专题ID</th>
+              <th width="60%">专题名称</th>
+              <th width="20%">移除</th>
+            </tr>
+            <{if $is_data}>
+            <{foreach from=$is_data item=i}>
+            <tr>
+                <td><{$i.id}></td>
+                <td class="padding"><{$i.name}></td>
+                <td><input type="button" value="移除" class="inputSub1 zt_change_remove" data-id="<{$i.id}>"></td>
+            </tr>
+            <{/foreach}>
+            <{/if}>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="okSub">
+    <input type="button" value="确定选择" id="ok_change_id" class="inputSub1" />
+    <input class="inputSub1" type="button" value="关闭窗口" onclick="closeSelect();" />
+  </div>
+</div>
+</body>
+</html>

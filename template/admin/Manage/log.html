@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+	<li>管理员登录日志</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainList">
+        <h1 class="slideSub"><a href="?m=Manage&a=index">管理</a><a class="curr" href="?m=Manage&a=log">登录日志</a></h1>
+        <div class="mainHead"><a href="?m=Manage&a=deleteLog" onclick="return confirm('确定要清理吗？')">-删除日志（只保留七天内）</a></div>
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+                <th>用户名</th>
+                <th>登录时间</th>
+                <th>登录ip</th>
+            </tr>
+            <{foreach from=$userLog item=v}>
+            <tr>
+                <td><{$v.name}></td>
+                <td><{$v.time|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+                <td><{$v.ip}></td>
+            </tr>
+            <{/foreach}>
+        </table>
+        <div class="page"><{$page}></div>
+    </div>
+</div>
+</body>
+</html>

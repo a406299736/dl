@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Zt&a=index">专题管理</a></li>
+    <li><span>&gt;</span></li>
+    <li>专题信息管理</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainList" id="allcheckbox">
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+            	<th width="5%">选择</th>
+            	<th width="5%">ID</th>
+                <th width="35%">信息标题</th>
+                <th width="15%">属性</th>
+                <th width="15">信息所属栏目</th>
+                <th width="15%">发布时间</th>
+                <th width="10%">操作</th>
+            </tr>
+            <form method="post" action="?m=Zt&a=infoManage">
+            <{foreach from=$list item=v}>
+            <tr>
+            	<td><input type="checkbox" value="<{$v.id}>" name="id[]" /></td>
+            	<td><{$v.id}></td>
+                <td class="padding"><a href="<{$v.url}>" target='_blank'><{$v.title}></a></td>
+                <td><{if $v.tuijian}><span class="hong">[推荐<{$v.tuijian}>]</span><{/if}><{if $v.remen}><span class="hong"> [热门<{$v.remen}>] </span><{/if}><{if !$v.remen && !$v.tuijian}>无<{/if}></td>
+                <td><a href="<{$v.classurl}>" target='_blank'><{$v.classname}></a></td>
+                <td><{'Y-m-d H:i:s'|date:$v.time}></td>
+                <td><a href="?m=Zt&a=removeInfo&id=<{$v.id}>" onclick="return confirm('确定要移除此此信息？');">移除</a></td>
+            </tr>
+            <{/foreach}>
+            <tr>
+            	<td width="5%"><input type="checkbox" class="allcheckbox" /></td>
+                <td width="95%" colspan="6" class="padding"><input type="submit" value="移除" onclick="return confirm('确定要移除这些信息？');" class="inputSub1" name="removeMore" /> <select name="remen">
+                <option value="0">不推荐</option>
+                <option value="1">一级热门</option>
+                <option value="2">二级热门</option>
+                <option value="3">三级热门</option>
+                <option value="4">四级热门</option>
+                <option value="5">五级热门</option>
+                <option value="6">六级热门</option>
+                <option value="7">七级热门</option>
+                <option value="8">八级热门</option>
+                <option value="9">九级热门</option>
+                <option value="10">十级热门</option>
+                </select> <input type='submit' class="inputSub1" name='remenSub' value='热门' /> 
+                <select name="tuijian">
+                <option value="0">不推荐</option>
+                <option value="1">一级推荐</option>
+                <option value="2">二级推荐</option>
+                <option value="3">三级推荐</option>
+                <option value="4">四级推荐</option>
+                <option value="5">五级推荐</option>
+                <option value="6">六级推荐</option>
+                <option value="7">七级推荐</option>
+                <option value="8">八级推荐</option>
+                <option value="9">九级推荐</option>
+                <option value="10">十级推荐</option>
+                </select> <input type='submit' class="inputSub1" name='tuijianSub' value='推荐' /> 
+                </td>
+            </tr>
+            </form>
+        </table>
+    </div>
+    <div class="page">共 <{$num}> 条 <{$page}></div>
+</div>
+</body>
+</html>

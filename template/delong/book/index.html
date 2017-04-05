@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><{$webname}></title>
+
+<meta name="keywords" content="<{$keywords}>" />
+<meta name="description" content="<{$description}>"/>
+ 
+
+<link href="<{$weburl}>template/jinbaolong/css/jbl_style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<{$weburl}>template/jinbaolong/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/jinbaolong/js/play.min.js"></script> 
+
+</head>
+
+
+<body>
+<{include file='header.html'}>
+
+
+
+<div class="middle_31">
+
+<div class="middle_3">
+ 
+
+
+        
+<{include file="ChanPin_left.html"}>
+ 
+    
+    <div class="mid_3ri">
+    	<div class="mid_3ri01"><span>您的位置： <{$navpos}> </span><font class="font_as">24小时热线：0551-64426742</font><div class="clear"></div></div>
+        <div class="mid_3ri02">
+       
+           <div class="new02"><{$title}></div>
+           
+           
+     
+     
+       <div class="ly">
+            	<form action='<{$weburl}>index.php?m=Book&a=setBook' method='post'>
+             	<div class="ly01">
+            	<font>*</font><span>联系人：</span><input type="text" class="ly11" /><em>请填写您的姓名，方便我们联系您。</em>
+                <div class="clear"></div>
+            </div>
+            <div class="ly02">
+            	<span>联系电话：</span><input type="text" class="ly021" /><input type="text" class="ly022" /><input type="text" class="ly021" /><em>固定电话（区号-电话号码-分机）</em>
+                <div class="clear"></div>
+            </div>
+            <div class="ly02">
+            	<span>手机号码：</span><input type="text" class="ly11" /><em>请填写您的手机号码</em>
+                <div class="clear"></div>
+            </div>
+            <div class="ly03">
+            	<font>*</font><span>电子邮箱：</span><input type="text" class="ly11" /><em>请填写您的电子邮箱</em>
+                <div class="clear"></div>
+            </div>
+            <div class="ly04">
+            	<font>*</font><span>备注：</span><textarea class="ly041"></textarea>
+                <div class="clear"></div>
+                <p>请填写您的<em>问题描述</em>，有您的支持，是我们不断前进的动力，<em>感谢您的支持！</em></p>
+            </div>
+            <div class="ly05">
+            	<font>*</font><span>验证码：</span><input type="text" class="ly051" /><img src="images/yzm.jpg"><a href="">看不清？！</a>
+                <div class="clear"></div>
+            </div>
+            <div class="ly06">
+            	<input type="button" class="ly061" name='setbook' value="提交" style="width:20px; height:20px; background:#F00;" /> <input type="reset" class="ly061" value="重置" />
+            </div>
+            
+                  
+                
+                </form>
+     
+    </div>
+            
+        </div>
+       
+    </div>
+    <div class="clear"></div>
+ </div>
+ 
+<{include file='footer.html'}>
+</body>
+</html>

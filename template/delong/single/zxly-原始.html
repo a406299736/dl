@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><{$title}>_<{$webname}></title>
+
+<meta name="keywords" content="<{$keywords}>" />
+<meta name="description" content="<{$description}>"/>
+
+
+<link href="<{$weburl}>template/delong/css/dl_style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="<{$weburl}>template/delong/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/delong/js/js.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$li1 = $(".apply_nav .apply_array");
+	$window1 = $(".apply .apply_w");
+	$left1 = $(".apply .img_l");
+	$right1 = $(".apply .img_r");
+	
+	$window1.css("width", $li1.length*166);
+
+	var lc1 = 0;
+	var rc1 = $li1.length-5;
+	
+	$left1.click(function(){
+		if (lc1 < 1) {
+			alert("已经是第一张图片");
+			return;
+		}
+		lc1--;
+		rc1++;
+		$window1.animate({left:'+=166px'}, 1000);
+	});
+
+	$right1.click(function(){
+		if (rc1 < 1){
+			alert("已经是最后一张图片");
+			return;
+		}
+		lc1++;
+		rc1--;
+		$window1.animate({left:'-=166px'}, 1000);
+	});
+
+})
+</script>
+
+
+
+<script language="javascript" type="text/javascript">
+var code ; //在全局 定义验证码
+function createCode(){ 
+code = new Array();
+var codeLength = 4;//验证码的长度
+var checkCode = document.getElementById("checkCode");
+checkCode.value = "";
+
+var selectChar = new Array(2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z');
+
+for(var i=0;i<codeLength;i++) {
+   var charIndex = Math.floor(Math.random()*32);
+   code +=selectChar[charIndex];
+}
+if(code.length != codeLength){
+   createCode();
+}
+checkCode.value = code;
+}
+
+function validate () {
+var inputCode = document.getElementById("input1").value.toUpperCase();
+
+if(inputCode.length <=0) {
+   alert("请输入验证码！");
+   return false;
+}
+else if(inputCode != code ){
+   alert("验证码输入错误！");
+   createCode();
+   return false;
+}
+else {
+   alert("成功！");
+   return true;
+}
+}
+</script>
+
+
+ <script language="javascript">
+
+//去空格
+function checkspace(checkstr) {
+	var str = '';
+	for(i = 0; i < checkstr.length; i++) 
+	{
+		str = str + ' ';
+	}
+	return (str == checkstr);
+}
+ 
+
+function check_message(formlist){	
+	var mingzi_code=new RegExp(/[\u4E00-\u9FA5\uF900-\uFA2D]/);
+	
+	if (!formlist.mingzi.value.match(mingzi_code)) {
+		alert("姓名为空，或者不正确!");
+		return false;                
+	}
+
+	var dianhua_code=new RegExp(/^0(([1-9]d)|([3-9]d{2}))d{8}$/);
+	
+	if (!formlist.dianhua.value.match(dianhua_code)) {
+		alert("固机号码为空或者不正确!");
+		return false;                
+	}
+	
+	var ouxiang_code=new RegExp(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/);
+	
+	if (!formlist.ouxiang.value.match(ouxiang_code)) {
+		alert("邮箱为空，或者不正确!");
+		return false;                
+	}
+	
+}
+
+
+</script>
+
+</head>
+
+
+<body onLoad="createCode();">
+
+ 
+<{include file='header.html'}>
+
+<div class="middle_1"><img src="<{$weburl}>template/delong/images/about01.jpg" /></div>
+<div class="middle_2">
+  
+<{include file='lxwm_left.html'}>
+    <div class="mid_2ri">
+    	<div class="mid_ri01"><{$navpos}></div>
+        <div class="mid_ri02">
+ 
+     	<style>
+		.forms_s{ font-family:"微软雅黑"; font-size:14px; margin-left:100px;}
+		.forms_s p{ height:15px;}
+        .forms_s p input{ float:left; width:200px; height:15px; padding:5px 0px; text-indent:4px; border:1px solid #999;}
+		.forms_s p textarea{float:left;padding:5px 0px; text-indent:4px; border:1px solid #999; width:400px;}
+        .forms_s p span{ float:left; width:80px; text-align:right; padding-right:4px;}
+		.tijiao input{ width:60px !important; height:30px !important; }
+		.tijiaos{ margin-left:85px; margin-right:40px; cursor:pointer;}
+		
+		.liuyan_s{ background:#f3f7fb; padding:10px 10px 40px 10px;}
+		.quedingtijiao{ width:120px; height:30px !important; margin-left:84px; background:#04498f; color:#FFF; cursor:pointer; font-family:"微软雅黑"; border:0px none;}
+        </style>
+ 
+ 
+ 
+   <div style="font-size:16px; margin-bottom:20px; text-indent:1em; font-family:'宋体';">
+   欢迎使用网站客户留言，我们期待与您的合作，也希望您提出宝贵的意见和建议，您的留言我们会尽快回复，请选择回复方式，并留下您的真实联系方式.
+   </div>
+ 
+   <div class="liuyan_s">
+ 
+   <form class="forms_s" action='/index.php?m=Form&a=index'   method="post" onsubmit="return check_message(this)">
+   <p style="padding-bottom:5px; border-bottom:1px solid #e4e4e4; margin-bottom:20px;"><strong style="color:#3e84c9;">基本信息</strong></p>
+      
+        <p><span>姓名:</span> <input type="text"  id="name"   name='mingzi'/><div style="clear:both;"></div></p>
+        <p><span>电话:</span> <input type="text" id="ph"  name='dianhua' /><div style="clear:both;"></div></p>
+        <p><span>邮箱:</span> <input type="text"  id="mails"  name='ouxiang'/><div style="clear:both;"></div></p>
+   
+   
+   
+   
+   <p style="padding-bottom:5px; border-bottom:1px solid #e4e4e4; margin-bottom:20px;"><strong style="color:#3e84c9;">请选择类别</strong></p>
+        
+        
+        <p><span>留言类别:</span><select name='liuylb' style="margin-left:10px;">
+        <option value="咨询" >咨询</option>
+        <option value="建议" >建议</option>
+        <option value="投诉" >投诉</option>
+        <option value="表扬" >表扬</option>
+        </select><strong style="color:#F00; margin-left:10px;">*</strong>必填<div style="clear:both;"></div></p>
+        
+        <p><span>选择类别:</span><select name='xuanzlb' style="margin-left:10px;">
+        <option value="计算机房建设" >计算机房建设</option>
+        <option value="综合布线" >综合布线</option>
+        <option value="安全防范" >安全防范</option>
+        <option value="设备购买" >IT设备购买</option>
+        <option value="外包服务" >IT外包服务</option>
+        <option value="商务合作咨询" >商务合作咨询</option>
+        </select><strong style="color:#F00; margin-left:10px;">*</strong>必填<div style="clear:both;"></div></p>
+        
+         <p style="padding-bottom:5px; border-bottom:1px solid #e4e4e4; margin-bottom:20px;"><strong style="color:#3e84c9;">填写留言</strong></p> 
+        
+         <p><span>请您留言:</span> <textarea name='qingninl'></textarea> <div style="clear:both;"></div></p>
+         
+        <p><span>回复方式:</span><select name='huifufs' style="margin-left:10px;">
+        <option value="电话回复" >电话回复</option>
+        <option value="邮件回复" >邮件回复</option>
+        <option value="不回复" >不回复</option>
+        </select><strong style="color:#F00; margin-left:10px;">*</strong>必填<div style="clear:both;"></div></p>
+         
+     <!--   <p><span>留言类别:</span><input type="text"    placeholder="请输入姓名"  /><div style="clear:both;"></div></p>-->
+        
+        <p><span>验证码:</span><input type="text" id="input1" /><input type="button" id="checkCode" class="code" style="width:60px; height:27px;" onClick="createCode()"  /><a href="#" onClick="createCode()" style="color:#105895; font-size:12px; padding-top:4px; float:left; margin-left:10px;">看不清楚,换一张</a> <div style="clear:both;"></div></p>
+        
+        
+        <p> <input type="hidden" name="id" value="7"><input type="submit" name="dyFormSub" value="确定提交" class="quedingtijiao"></p>
+        
+       
+ 
+        </form>
+        
+    </div>
+        <style type="text/css">
+.code{
+background-image:url(111.jpg);
+font-family:Arial,宋体;
+font-style:italic;
+color:green;
+border:0;
+padding:2px 3px;
+letter-spacing:3px;
+font-weight:bolder;
+}
+.unchanged {
+border:0;
+}
+</style>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+      
+<{include file='footer.html'}>
+</body>
+</html>

@@ -1,0 +1,21 @@
+ 
+      <div class="mid_2le">
+    	<div class="mid_2le01">
+        	<div class="mid_201top">产品中心</div>
+                  <{menu classid=216 child=1}> 
+            <div class="mid_201mid">
+             <{foreach from=$menu_data item=v}>
+                 <a href="<{$v.classurl}>"<{if ($v.classid eq $topid || $v.classid eq $classid) && $classid != 4}> id='active1'<{/if}>><{$v.classname}></a>
+                <img src="<{$weburl}>template/delong/images/dy_left_a.jpg" />
+                <{/foreach}>
+            </div>
+            <div class="mid_201foot"><img src="<{$weburl}>template/delong/images/dy_left_foot.jpg" /></div>
+        </div>
+        <div class="mid_2le02">
+        	<img src="<{$weburl}>template/delong/images/dy_left_lx.jpg" />
+            <span>
+            	   <{single classid=165}>
+        	<{$single_data.content}>
+            </span>
+        </div>
+    </div>

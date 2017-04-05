@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><{$webname}></title>
+
+<meta name="keywords" content="<{$keywords}>" />
+<meta name="description" content="<{$description}>"/>
+
+<link href="<{$weburl}>template/delong/css/dl_style.css" type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="<{$weburl}>template/delong/css/owl.carousel.css">
+<link type="text/css" rel="stylesheet" href="<{$weburl}>template/delong/css/owl.theme.css">
+<script type="text/javascript" src="<{$weburl}>template/delong/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/delong/js/js.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/delong/js/play.min.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/delong/js/jquery.SuperSlide.2.1.1.source.js"></script>
+<script type="text/javascript" src="<{$weburl}>template/delong/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$li1 = $(".apply_nav .apply_array");
+	$window1 = $(".apply .apply_w");
+	$left1 = $(".apply .img_l");
+	$right1 = $(".apply .img_r");
+	
+	$window1.css("width", $li1.length*166);
+
+	var lc1 = 0;
+	var rc1 = $li1.length-5;
+	
+	$left1.click(function(){
+		if (lc1 < 1) {
+			alert("已经是第一张图片");
+			return;
+		}
+		lc1--;
+		rc1++;
+		$window1.animate({left:'+=166px'}, 1000);
+	});
+
+	$right1.click(function(){
+		if (rc1 < 1){
+			alert("已经是最后一张图片");
+			return;
+		}
+		lc1++;
+		rc1--;
+		$window1.animate({left:'-=166px'}, 1000);
+	});
+
+})
+</script>
+
+
+</head>
+<body>
+<{include file='header.html'}>
+
+
+<div class="play">
+    <div class="fxplay">
+      <{article classid=55 num=3}>
+        <div class="play-box">
+         <{foreach from=$article_data item=v name=lunbo_s}>
+          <div class="play-item" style="background:url(<{$v.lbpic}>) center no-repeat;"></div>
+          <{/foreach}>
+        </div>
+    </div>
+    <div class="bar">
+    	<div id="playNo"></div>
+    </div>
+    <script>
+    //图片新闻轮播
+$('.fxplay').fxuiPlay({
+  
+	//prev:$('#prev'),     //上一张
+	//next:$('#next'),     //下一张
+	no:$('#playNo'),     //是否开启数字
+	auto:true,           //是否自动播放
+	autotime:3000,       //自动播放间隔
+	effect:2,            //特效类型 0：渐变；1：变小 ;2:左右; 3:上下;
+	efftime:400,         //渐变时间
+	ismobi:false,         //如果手机端请传ture,会开启划动的操作。
+	evt:'click'          //click(默认)和hover/mouserover
+	
+});
+    </script>
+</div>
+
+
+
+<div class="ban01">&nbsp;</div>
+<div class="s_new">
+<div class="s_new01">
+	<div class="s_new011"><span>公司新闻</span><img src="<{$weburl}>template/delong/images/s_new01.jpg" /></div>
+    <div class="s_new012">
+    	<div class="bd">
+          <{article classid=146 num=12 }> 
+        	<ul>
+              <{foreach from=$article_data item=v name=product_s}>
+            	<li><a href="<{$v.url}>"><{$v.title|lmxstr:70:'...'}> </a><span>[<{$v.time|date_format:'%Y/%m/%d'}>]</span></li>
+              <{/foreach}>
+            </ul>
+        </div>
+        <div class="hd"><a class="prev"> < </a><a class="next"> > </a></div>
+        <script>
+                $(function(){
+					jQuery(".s_new012").slide({
+						prevCell:".prev",
+						nextCell:".next",
+						effect:"left",
+						mainCell:".bd ul",
+						autoPlay:true,          
+						interTime:2000,      
+						trigger:'click' 
+						})
+					})
+                </script>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('#scroll').owlCarousel({
+		items: 9,
+		autoPlay: true,
+		navigation: true,
+		navigationText: ["",""],
+		scrollPerPage: true
+	});
+});
+</script>
+
+<div class="scroll-outer">
+
+
+ <{article classid=217 num=12 }> 
+	<div id="scroll" class="owl-carousel">
+     <{foreach from=$article_data item=v name=product_s}>
+		<div class="item">
+			<a href="<{$v.classurl}>"><img src="<{$v.pimgs}>" /></a>
+			<p><{$v.title|lmxstr:20:'...'}></p>
+		</div>
+    <{/foreach}> 
+      
+            
+	
+        
+	</div>
+</div>
+
+
+
+
+<{include file='footer.html'}>
+</body>
+</html>

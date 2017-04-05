@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript" src="template/admin/js/content.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+	<li>生成专题页面</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainForm schtml" id="mainForm">
+        <form action="?m=Schtml&a=tags" method="post">
+        <input type="hidden" name="scform" value="1" />
+        <table cellpadding="0" cellspacing="0" border="0">
+        	<tr>
+            	<th>生成全部Tags</th>
+            </tr>
+        	<tr>
+            	<td><input type="submit" name="alltagssub" value="生成全部Tags" class="inputSub1" /></td>
+            </tr>
+        	<tr>
+            	<th>按照Tags生成</th>
+            </tr>
+        	<tr>
+            	<td><input type="text" name="tagsname" id="tagsname" class="inputText inputWidth"> <input type="button" class="inputSub1" value="选择Tags" onclick="changeTags()"> <input type="submit"class="inputSub1" name="tagsidsub" value="开始生成" /> <span class="succ">可以直接填写Tags id，多个Tags用“,”逗号隔开</span></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+<script type="text/javascript" src="template/admin/js/content.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.removeObj').click(function(){
+		$(this).parent('li').remove();	
+	})	
+})
+</script>
+<style>
+.caijiUl{ height:1%; overflow:hidden;}
+.caijiUl li{ float:left; padding-right:15px; padding-bottom:15px; text-align:center;}
+.caijiUl li a.removeObj{ display:block; height:24px; line-height:24px; background:#EAEAEA; color:#000; text-decoration:none;}
+.caijiUl li a.removeObj:hover{ background:#FF3300; color:#fff;}
+</style>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=index">节点管理</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=manage&id=<{$jdData.id}>">采集【<{$jdData.name}>】管理</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=caijiDataList&lid=<{$cjData.lid}>&id=<{$jdData.id}>">采集数据【<{$cjData.lname}>】列表</a></li>
+	<li><span>&gt;</span></li>
+    <li>修改查看采集数据</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainForm" id="mainForm">
+        <form action="?&m=Acquisi&a=updateCjtoData" method="post" name="form1">
+    	<table cellpadding="0" border="0" cellspacing="0">
+        	<{foreach from=$data item=v key=k}>
+            <tr>
+            	<td align="right" width="15%"><{$v.name}></td>
+            	<td>
+                	<{if $v.type == 'moreimage'}>
+                        <ul class="caijiUl">
+                            <{foreach from=$v.value item=j}>
+                            <li><input type="hidden" name="<{$k}>[]" value='<{$j}>' /><a href="<{$j}>" target='_blank'><img src="<{$j}>" width=100 height=100 /></a><br /><a href="javascript:void(0);" class="removeObj">点击删除</a></li>
+                            <{/foreach}>
+                        </ul>
+                    <{elseif $v.type == 'morefile'}>
+                        <ul class="caijiUl">
+                        <{foreach from=$v.value item=j}>
+                        <li><input type="hidden" name="<{$k}>[]" value='<{$j}>' /><a href="<{$j}>" target="_blank"><{$j}></a> <a href="javascript:void(0);" class="removeObj">点击删除</a></li>
+                        <{/foreach}>
+                        </ul>
+                    <{elseif $v.type == 'text'}>
+                        <input type="text" class="inputText inputWidth" value="<{$v.value}>" name='<{$k}>' id='<{$k}>' />
+                        <{if $k == 'ztid'}>
+                        <input type="button" class="inputSub1" value="选择专题" onclick="add_pushzt()"> <span class="curr">多个用英文逗号“,”隔开</span>
+                        <{elseif $k == 'tagsname'}>
+                        <input type="button" value="选择Tags" onclick="changeTags();" class="inputSub1"> <span class="curr">多个用英文逗号“,”隔开</span>
+                        <{/if}>
+                    <{elseif $v.type == 'textarea' || $v.type == 'editor'}>
+                        <textarea name="<{$k}>" class='textarea'><{$v.value}></textarea>
+                    <{elseif $v.type == 'image'}>
+                    <input type="hidden" name="<{$k}>" value='<{$v.value}>' /><a href="<{$v.value}>" target="_blank"><img src="<{$v.value}>" width="100" height="100" /></a>
+                    <{/if}>
+                </td>
+            </tr>
+            <{/foreach}>
+            <tr>
+            	<td align="right">所采集的url地址：</td>
+                <td><{$url}></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td><input type="hidden" name="id" value='<{$id}>' /><input type="hidden" name="backurl" value="<{$backurl}>" /><input type="submit" value="提交" name="updateCaiji" class="inputSub" id="updateCaiji" /></td>
+            </tr>
+       </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><{$webname}></title>
+
+<link  href="<{$weburl}>template/yunjing/css/index.css"  rel="stylesheet" />
+<link  href="<{$weburl}>template/yunjing/css/common.css"  rel="stylesheet" />
+<script  src="<{$weburl}>template/yunjing/js/jquery.min.js"  ></script>
+<script  src="<{$weburl}>template/yunjing/js/superslide.2.1.js"  ></script>
+<script  src="<{$weburl}>template/yunjing/js/index.js"  ></script>
+
+</head>
+
+<body>
+<div class="wrap">
+	
+<{include file='header.html'}>
+    
+    
+ <div  style="height:125px;background:url(<{$weburl}>template/yunjing/images/newsPic_03.jpg) no-repeat center;margin:10px 0px;"></div>
+
+
+<div class="content">
+	<div class="indexCOn clear">
+    
+ <{include file='gsxw_left.html'}>
+
+   <div class="rightCon">
+        	<div class="posi clear">
+            	<b class="fl">公司新闻</b>
+            
+				<div class="fr">            
+            	您所在的位置：<a href="<{$weburl}>">首页</a>- 搜索 - <{$title}>
+                </div>
+            
+            </div>
+        	
+            <div class="rightBto">
+            	<div class="news newsIn">
+                    	<ul>
+                      <{foreach from=$list item=v}> 
+                       <li><a href="<{$v.url}>" class="clear"><span class="fl"><{$v.title|lmxstr:60:'...'}></span><span class="fr"><{'Y-m-d'|date:$v.time}></span></a></li>
+                    <{/foreach}>
+                        </ul>
+            </div>
+            <div class="list">
+         <{if $page}>
+            <div class="page"><{$page}> 共 <{$num}>条</div>
+            <{/if}>
+        </div>
+        </div>
+      </div>
+        </div>
+
+	
+	
+</div><!--content E-->
+    
+    </div><!--wrap E-->
+
+
+
+<{include file='footer.html'}>
+
+</body>
+</html>

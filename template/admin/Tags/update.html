@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+	<li><a href="?m=Tags&a=index">Tags管理</a></li>
+	<li><span>&gt;</span></li>
+	<li>修改Tags</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainForm" id="mainForm">
+        <form action="?&m=Tags&a=update" method="post" name="form1" onsubmit="return checkZt();">
+    	<table cellpadding="0" border="0" cellspacing="0">
+            <tr>
+            	<td align="right" width="12%">Tags名称：</td>
+            	<td width="88%"><input type="text" class="inputText inputWidth" name="name" value="<{$name}>" id="name" /></td>
+            </tr>
+            <tr>
+            	<td align="right">推荐：</td>
+                <td>热门：<select name="remen">
+                	<option value="0"<{if $remen == 0}> selected<{/if}>>不推荐</option>
+                    <option value="1"<{if $remen == 1}> selected<{/if}>>一级热门</option>
+                    <option value="2"<{if $remen == 2}> selected<{/if}>>二级热门</option>
+                    <option value="3"<{if $remen == 3}> selected<{/if}>>三级热门</option>
+                    <option value="4"<{if $remen == 4}> selected<{/if}>>四级热门</option>
+                    <option value="5"<{if $remen == 5}> selected<{/if}>>五级热门</option>
+                    <option value="6"<{if $remen == 6}> selected<{/if}>>六级热门</option>
+                    <option value="7"<{if $remen == 7}> selected<{/if}>>七级热门</option>
+                    <option value="8"<{if $remen == 8}> selected<{/if}>>八级热门</option>
+                    <option value="9"<{if $remen == 9}> selected<{/if}>>九级热门</option>
+                    <option value="10"<{if $remen == 10}> selected<{/if}>>十级热门</option>
+                </select> 推荐：<select name="tuijian">
+                	<option value="0"<{if $tuijian == 0}> selected<{/if}>>不推荐</option>
+                    <option value="1"<{if $tuijian == 1}> selected<{/if}>>一级推荐</option>
+                    <option value="2"<{if $tuijian == 2}> selected<{/if}>>二级推荐</option>
+                    <option value="3"<{if $tuijian == 3}> selected<{/if}>>三级推荐</option>
+                    <option value="4"<{if $tuijian == 4}> selected<{/if}>>四级推荐</option>
+                    <option value="5"<{if $tuijian == 5}> selected<{/if}>>五级推荐</option>
+                    <option value="6"<{if $tuijian == 6}> selected<{/if}>>六级推荐</option>
+                    <option value="7"<{if $tuijian == 7}> selected<{/if}>>七级推荐</option>
+                    <option value="8"<{if $tuijian == 8}> selected<{/if}>>八级推荐</option>
+                    <option value="9"<{if $tuijian == 9}> selected<{/if}>>九级推荐</option>
+                    <option value="10"<{if $tuijian == 10}> selected<{/if}>>十级推荐</option>
+                </select></td>
+            </tr>
+            <tr>
+            	<td align="right">选择模板：</td>
+                <td><select name="tem" id="tem">
+                <{foreach from=$tem item=v}>
+                <option value="<{$v}>"<{if $v == $tem}> selected<{/if}>><{$v}></option>
+                <{/foreach}>
+                </select></td>
+            </tr>
+            <tr>
+            	<td align="right">每页显示信息：</td>
+                <td><input type="text" name="pagenum" value="<{$pagenum}>" class="inputText" style="width:30px; text-align:center;" /></td>
+            </tr>
+            <tr>
+            	<td align="right">前台是否隐藏：</td>
+                <td><input type="checkbox" name="display"<{if $display}> checked<{/if}> value="1" /> <span class="succ">隐藏后 前台标签调用不到该专题</span></td>
+            </tr>
+            <tr>
+                <th colspan="2">SEO设置</th>
+            </tr>
+            <tr>
+            	<td width="12%" align="right">网页标题：</td>
+            	<td width="88%"><input type="text" class="inputText inputWidth" name="title" id="title" value="<{$title}>" /> <span class="succ">META Title</span> <span class="hui">最多255个字符</span></td>
+            </tr>
+            <tr>
+            	<td align="right">网页关键词：</td>
+            	<td><input type="text" value="<{$keywords}>" class="inputText inputWidth" name="keywords" id="keywords" /> <span class="succ">META Keywords</span> <span class="hui">关键词以“,”号隔开</span></td>
+            </tr>
+            <tr>
+            	<td align="right">网页描述：</td>
+            	<td><textarea class="textarea" name="description"><{$description}></textarea> <span class="succ">META Description <span class="hui">针对搜索引擎设置的网页描述</span></span></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td><input type="hidden" value="<{$id}>" name='id' /><input type="hidden" name="backurl" value="<{$backurl}>" /><input type="submit" value="提交" name="update" class="inputSub" id="update" /></td>
+            </tr>
+       </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<script type="text/javascript" src="template/admin/js/jquery.js"></script>
+<script type="text/javascript" src="template/admin/js/main.js"></script>
+</head>
+
+<body>
+<div class="dqnav">
+<ul>
+	<li>当前位置：</li>
+	<li><a href="?m=index&a=main">后台首页</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=index">节点管理</a></li>
+	<li><span>&gt;</span></li>
+    <li><a href="?m=Acquisi&a=manage&id=<{$jdData.id}>">采集【<{$jdData.name}>】管理</a></li>
+	<li><span>&gt;</span></li>
+    <li>查看采集数据【<{$cjData.lname}>】</li>
+</ul>
+</div>
+<div class="mainBox">
+    <div class="mainList" id="allcheckbox">
+    <div class="mainHead"><a href="?m=Acquisi&a=inMysql&lid=<{$cjData.lid}>">+全部入库</a></div>
+        <table cellpadding="0" cellspacing="1" border="0">
+        	<form method="post" action="?m=Acquisi&a=manageCaijiData">
+            <input type="hidden" name="classid" value="<{$cjData.classid}>" />
+            <tr>
+            	<th width="7%">选择</th>
+            	<th width="7%">id</th>
+                <th width="44%">标题</th>
+                <th width="10%">是否已入库</th>
+                <th width="20%">操作</th>
+            </tr>
+            <{foreach from=$list item=v}>
+            <tr>
+            	<td><input type="checkbox" value="<{$v.id}>" name='id[]' /></td>
+                <td><{$v.id}></td>
+                <td class="padding"><{$v.data.title}></td>
+                <td><{if $v.is_in}><span class="hong">是</span><{else}>否<{/if}></td>
+                <td><a href="?m=Acquisi&a=one_inMysql&id=<{$v.id}>&classid=<{$cjData.classid}>" target='_blank'>入库</a><a href="?m=Acquisi&a=againCaiji&id=<{$v.id}>&lid=<{$cjData.lid}>" target='_blank'>重新采集</a><a href="?m=Acquisi&a=showCjData&id=<{$jdData.id}>&lid=<{$cjData.lid}>&cid=<{$v.id}>">查看修改</a><a href="?m=Acquisi&a=deleteCjData&id=<{$v.id}>" onclick="return confirm('确定要删除吗');">删除</a></td>
+            </tr>
+            <{/foreach}>
+            <tr>
+            	<td><input type="checkbox" class="allcheckbox" /></td>
+                <td colspan="4" class="padding"><input type="submit" name="more_inMysql" value="批量入库" class="inputSub1" /> <input type="submit" name="more_del_cjData" value="批量删除" class="inputSub1" onclick="return confirm('确定要删除吗');" /> <input type="submit" name="del_in_mysql" value="删除已入库数据" class="inputSub1" onclick="return confirm('确定要删除吗');" /></td>
+            </tr>
+            </form>
+        </table>
+    </div>
+    <div class="page">共 <{$num}> 条 <{$page}></div>
+</div>
+</body>
+</html>

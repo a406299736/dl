@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="template/admin/css/style.css" />
+<style type="text/css">
+*{ padding:0px; margin:0px;}
+.url_box{ margin:20px; padding-top:30px;}
+.url_box h1{ font-size:16px; font-family:'微软雅黑'; color:#235B7C;}
+.url_list{margin-top:10px;padding:20px;border:1px solid #DCE3ED;}
+.close{ text-align:center; padding-bottom:10px;}
+.url_list li{ padding:10px 0px; border-bottom:1px solid #E8E8E8;}
+.url_list li a{ font-size:14px; font-family:Arial; color:#262626;}
+.url_list li a:hover{color:#F00;}
+.close{  background:#fff; position:fixed; left:0px; top:0px; width:100%; padding:15px 0px;}
+</style>
+</head>
+
+<body>
+<div class="url_box">
+<div class="close"><input type="button" class="inputSub1" value="关闭窗口" onclick="window.close();" /></div>
+<h1>由于目标网站网络问题，如果没有截取到，请多尝试俩次，如果还是出错，请修改你的截取规则</h1>
+<div class="url_list">
+	<ul>
+    	<{foreach from=$list item=v}>
+    	<li><a href="<{$v}>" target='_blank'><{$v}></a></li>
+        <{/foreach}>
+    </ul>
+</div>
+</div>
+</body>
+</html>

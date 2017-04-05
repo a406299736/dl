@@ -1,0 +1,117 @@
+<style>
+.rides-cs {  font-size: 12px; background:#29a7e2; position: fixed; top: 250px; right: 0px; _position: absolute; z-index: 1500; border-radius:6px 0px 0 6px;}
+.rides-cs a { color: #00A0E9;}
+.rides-cs a:hover { color: #ff8100; text-decoration: none;}
+.rides-cs .floatL { width: 36px; float:left; position: relative; z-index:1;margin-top: 21px;height: 181px;}
+.rides-cs .floatL a { font-size:0; text-indent: -999em; display: block;}
+.rides-cs .floatR { width: 130px; float: left; padding: 5px; overflow:hidden;}
+.rides-cs .floatR .cn {background:#F7F7F7; border-radius:6px;margin-top:4px;}
+.rides-cs .cn .titZx{ font-size: 14px; color: #333;font-weight:600; line-height:24px;padding:5px;text-align:center;}
+.rides-cs .cn ul {padding:0px;}
+.rides-cs .cn ul li { line-height: 38px; height:38px;border-bottom: solid 1px #E6E4E4;overflow: hidden;text-align:center;}
+.rides-cs .cn ul li span { color: #777;}
+.rides-cs .cn ul li a{color: #777;}
+.rides-cs .cn ul li img { vertical-align: middle;}
+.rides-cs .btnOpen, .rides-cs .btnCtn {  position: relative; z-index:9; top:25px; left: 0;  background-image: url(http://demo.lanrenzhijia.com/2014/service1031/images/lanrenzhijia.png); background-repeat: no-repeat; display:block;  height: 146px; padding: 8px;}
+.rides-cs .btnOpen { background-position: 0 0;}
+.rides-cs .btnCtn { background-position: -37px 0;}
+.rides-cs ul li.top { border-bottom: solid #ACE5F9 1px;}
+.rides-cs ul li.bot { border-bottom: none;}
+</style>
+<!--代码部分begin-->
+<div id="floatTools" class="rides-cs" style="height:246px;">
+  <div class="floatL">
+  	<a id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px;display:block" href="javascript:void(0);">展开</a>
+  	<a id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px;display:none" href="javascript:void(0);">收缩</a>
+  </div>
+  <div id="divFloatToolsView" class="floatR" style="display: none;height:237px;width: 140px;">
+    <div class="cn">
+      <h3 class="titZx">北京德隆在线客服</h3>
+      <ul>
+      <{article classid=232 num=5 }>
+<{foreach from=$article_data item=v}>
+   <li><span><{$v.kefu}></span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<{$v.lianxiqq}>&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2380038282:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+<{/foreach}> 
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+<script>
+	$(function(){
+		$("#aFloatTools_Show").click(function(){
+			$('#divFloatToolsView').animate({width:'show',opacity:'show'},100,function(){$('#divFloatToolsView').show();});
+			$('#aFloatTools_Show').hide();
+			$('#aFloatTools_Hide').show();				
+		});
+		$("#aFloatTools_Hide").click(function(){
+			$('#divFloatToolsView').animate({width:'hide', opacity:'hide'},100,function(){$('#divFloatToolsView').hide();});
+			$('#aFloatTools_Show').show();
+			$('#aFloatTools_Hide').hide();	
+		});
+	});
+</script>
+<!--代码部分end-->
+
+<div class="top">
+	<div class="logo"><a href="<{$weburl}>"><img src="<{$weburl}>template/delong/images/logo.jpg" /></a></div>
+    <div class="top_ri"><a href="javascript:void(0);" onclick="SetHome(this,'http://www.ceshi.com');"  >设为首页</a>   |  <a href="/index.php?m=list&a=index&classid=215">联系我们</a>  |  <a href="/index.php?m=list&a=index&classid=213">加入我们</a>  |  联系电话：13910067271</div>
+    <div class="clear"></div>
+</div>
+
+<div class="nav_1">
+<div class="nav">
+ <{menu child=1}>
+	<ul>
+    	  <li><a href="<{$weburl}>" title="首页"<{if $classid eq 'home'}> class="currnet"<{/if}>>网站首页</a></li>
+          <{foreach from=$menu_data item=v}>
+          <li><a href="<{$v.classurl}>" title="<{$v.classname}>"<{if ($v.classid eq $topid || $v.classid eq $classid) && $classid != 4}> class='currnet'<{/if}>><{$v.classname}></a>
+
+     	<{if $v.child}>
+        <dl class="nav01">
+        <{foreach from=$v.child item=i}>
+        <dd class="nav_s_ul_li_dl_dd"><a href="<{$i.classurl}>"><{$i.classname}></a></dd>
+        <{/foreach}>
+        </dl>
+        <{/if}>
+        </li>
+     <{/foreach}>
+    </ul>
+</div>
+</div>
+
+
+ <script type="text/javascript">
+ 
+function SetHome(obj,url){
+    try{
+        obj.style.behavior='url(#default#homepage)';
+       obj.setHomePage(url);
+   }catch(e){
+       if(window.netscape){
+          try{
+              netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+         }catch(e){
+              alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入"+"about:config"+"并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+          }
+       }else{
+        alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【"+url+"】设置为首页。");
+       }
+  }
+}
+ 
+//收藏本站 bbs.ecmoban.com
+function AddFavorite(title, url) {
+  try {
+      window.external.addFavorite(url, title);
+  }
+catch (e) {
+     try {
+       window.sidebar.addPanel(title, url, "");
+    }
+     catch (e) {
+         alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+     }
+  }
+}
+</script>
