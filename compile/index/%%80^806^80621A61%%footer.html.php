@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-10 13:59:41
+<?php /* Smarty version 2.6.28, created on 2017-04-10 18:32:06
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),)), $this); ?>
@@ -98,24 +98,26 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="widget">
-                    <div class="content tag-cloud text-center">
-                        <p>© 2015 北京德隆伟烨科技发展有限公司  &nbsp;&nbsp;版权所有 &nbsp;&nbsp; 京ICP备15001670号 &nbsp;&nbsp; 京公网安备11010802015957</p>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget">
+                            <div class="content tag-cloud text-center">
+                                <p>© 2015 北京德隆伟烨科技发展有限公司  &nbsp;&nbsp;版权所有 &nbsp;&nbsp; 京ICP备15001670号 &nbsp;&nbsp; 京公网安备11010802015957</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p></p>
+                        <p>地址: 北京市朝阳区小红门鸿博家园C区7号楼 邮编：100176 电话：010-57123699    13910067271 E-mail:shangwu@dlwy.cn</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p></p>
-                <p>地址: 北京市朝阳区小红门鸿博家园C区7号楼 邮编：100176 电话：010-57123699    13910067271 E-mail:shangwu@dlwy.cn</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3 text-center">
                 <div class="widget">
-                    <img class="img-responsive center-block" src="/dlwywx.jpg" style="width: 10%; height: 10%;"/>
+                    <img class="img-responsive center-block" src="/dlwywx.jpg" style="width: 30%; height: 30%;"/>
                 </div>
             </div>
         </div>
