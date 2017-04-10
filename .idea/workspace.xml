@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa6b12c3-bd79-4ac3-9950-7eb2c2bae480" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/column/dl_new-原始1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/content/dl_nchanpin-原始.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/content/dl_nnew-原始.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/header-H5原始网站样式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/index-H5原始网站样式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/delong/single/zpxx-原始1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%1A^1A2^1A273C14%%dl_new.html.php" afterPath="$PROJECT_DIR$/compile/index/%%1A^1A2^1A273C14%%dl_new.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%1E^1EF^1EF52494%%zpxx.html.php" afterPath="$PROJECT_DIR$/compile/index/%%1E^1EF^1EF52494%%zpxx.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%25^258^25893801%%dl_nnew.html.php" afterPath="$PROJECT_DIR$/compile/index/%%25^258^25893801%%dl_nnew.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%60^60E^60EAA91F%%zpxx_left.html.php" afterPath="$PROJECT_DIR$/compile/index/%%60^60E^60EAA91F%%zpxx_left.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%61^613^613D7F90%%dl_chanpin.html.php" afterPath="$PROJECT_DIR$/compile/index/%%61^613^613D7F90%%dl_chanpin.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%66^66E^66EA9120%%dl_tulist.html.php" afterPath="$PROJECT_DIR$/compile/index/%%66^66E^66EA9120%%dl_tulist.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%71^714^714F4B17%%header.html.php" afterPath="$PROJECT_DIR$/compile/index/%%71^714^714F4B17%%header.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%75^757^75707A30%%ywly.html.php" afterPath="$PROJECT_DIR$/compile/index/%%75^757^75707A30%%ywly.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%77^774^774BE9C9%%index.html.php" afterPath="$PROJECT_DIR$/compile/index/%%77^774^774BE9C9%%index.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%80^806^80621A61%%footer.html.php" afterPath="$PROJECT_DIR$/compile/index/%%80^806^80621A61%%footer.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%87^871^8711CCBB%%dl_nchanpin.html.php" afterPath="$PROJECT_DIR$/compile/index/%%87^871^8711CCBB%%dl_nchanpin.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%F9^F96^F9667958%%gywm.html.php" afterPath="$PROJECT_DIR$/compile/index/%%F9^F96^F9667958%%gywm.html.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/db.inc.php" afterPath="$PROJECT_DIR$/inc/db.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/column/dl_chanpin.html" afterPath="$PROJECT_DIR$/template/delong/column/dl_chanpin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/column/dl_new.html" afterPath="$PROJECT_DIR$/template/delong/column/dl_new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/column/dl_tulist.html" afterPath="$PROJECT_DIR$/template/delong/column/dl_tulist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/content/dl_gcyj.html" afterPath="$PROJECT_DIR$/template/delong/content/dl_gcyj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/content/dl_nchanpin.html" afterPath="$PROJECT_DIR$/template/delong/content/dl_nchanpin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/content/dl_nnew.html" afterPath="$PROJECT_DIR$/template/delong/content/dl_nnew.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/css/style.css" afterPath="$PROJECT_DIR$/template/delong/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/footer.html" afterPath="$PROJECT_DIR$/template/delong/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/header.html" afterPath="$PROJECT_DIR$/template/delong/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/index.html" afterPath="$PROJECT_DIR$/template/delong/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/gywm.html" afterPath="$PROJECT_DIR$/template/delong/single/gywm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/jjfa.html" afterPath="$PROJECT_DIR$/template/delong/single/jjfa.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/lxwm.html" afterPath="$PROJECT_DIR$/template/delong/single/lxwm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/rlzx.html" afterPath="$PROJECT_DIR$/template/delong/single/rlzx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/ywly.html" afterPath="$PROJECT_DIR$/template/delong/single/ywly.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/zpxx.html" afterPath="$PROJECT_DIR$/template/delong/single/zpxx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/zyfw.html" afterPath="$PROJECT_DIR$/template/delong/single/zyfw.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+            <state relative-caret-position="246">
+              <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,6 +46,16 @@
                 <element signature="e#7392#7437#0" expanded="true" />
                 <element signature="e#7481#7540#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/db.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,7 +150,6 @@
         <option value="$PROJECT_DIR$/template/delong/single/zxly.html" />
         <option value="$PROJECT_DIR$/template/delong/ywly_left.html" />
         <option value="$PROJECT_DIR$/template/delong/single/rczpjl.html" />
-        <option value="$PROJECT_DIR$/inc/db.inc.php" />
         <option value="$PROJECT_DIR$/template/delong/column/dl_chanpin-原始+.html" />
         <option value="$PROJECT_DIR$/template/delong/content/dl_nchanpin-原始.html" />
         <option value="$PROJECT_DIR$/template/delong/column/dl_chanpin.html" />
@@ -197,6 +171,7 @@
         <option value="$PROJECT_DIR$/template/delong/css/style.css" />
         <option value="$PROJECT_DIR$/template/delong/header.html" />
         <option value="$PROJECT_DIR$/template/delong/index.html" />
+        <option value="$PROJECT_DIR$/inc/db.inc.php" />
       </list>
     </option>
   </component>
@@ -555,12 +530,12 @@
       <workItem from="1491444150988" duration="30000" />
       <workItem from="1491458201073" duration="1774000" />
       <workItem from="1491563925145" duration="4061000" />
-      <workItem from="1491790924612" duration="6256000" />
+      <workItem from="1491790924612" duration="6519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57692000" />
+    <option name="totallyTimeSpent" value="57955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="719" extended-state="6" />
@@ -573,7 +548,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -936,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/db.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="e#7#65#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/images/about.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -961,8 +926,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+        <state relative-caret-position="246">
+          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -989,6 +954,14 @@
             <element signature="e#7392#7437#0" expanded="true" />
             <element signature="e#7481#7540#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/db.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
