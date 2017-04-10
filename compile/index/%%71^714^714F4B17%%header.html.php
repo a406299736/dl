@@ -1,13 +1,19 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-07 20:23:23
+<?php /* Smarty version 2.6.28, created on 2017-04-10 15:55:10
          compiled from header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 31, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 37, false),)), $this); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/css/style.css">
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<style>
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+</style>
 <!--代码部分begin-->
 <div class="container bd">
     <div class="row">
@@ -95,7 +101,7 @@ template/delong/images/logo.jpg"></a></div>
     </div>
 </div>
 
-<div style="height: 15px;"></div>
+<div style="height: 5px;"></div>
  <script type="text/javascript">
  
 function SetHome(obj,url){

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-10 12:13:51
+<?php /* Smarty version 2.6.28, created on 2017-04-10 15:01:08
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 68, false),array('modifier', 'lmxstr', 'index.html', 52, false),array('modifier', 'date_format', 'index.html', 52, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 65, false),array('modifier', 'lmxstr', 'index.html', 51, false),array('modifier', 'date_format', 'index.html', 51, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -53,9 +53,8 @@ if ($this->_foreach['lunbo_s']['total'] > 0):
 	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-	<div style="height: 1px;"></div>
-	<div class="container custom-news-bg">
-		<div class="row">
+	<div style="height: 5px;"></div>
+		<div class="row custom-news-bg">
 			<div class="col-xs-5 col-md-2 col-lg-2 col-lg-offset-1" style="padding-top: 7px;">
 				公司新闻 &nbsp;
 				<p class="glyphicon glyphicon-menu-right"></p>
@@ -79,11 +78,9 @@ if ($this->_foreach['product_s']['total'] > 0):
 				<div id="scroll_end"></div>
 			</div>
 		</div>
-	</div>
 
 	<div style="height: 20px;"></div>
-	<div class="container bg-info">
-		<div class="row" style="padding-top: 25px;padding-bottom: 25px;">
+		<div class="row bg-info" style="padding-top: 25px;padding-bottom: 25px;">
 			<div class="col-xs-7 col-md-2">
 				<img class="img-responsive" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about.jpg">
@@ -103,12 +100,11 @@ template/delong/images/about.jpg">
 ">查看更多</a></button>
 			</div>
 		</div>
-	</div>
 
 <div style="height: 20px;"></div>
-	<div class="row" style="margin-left: 0px;">
-		<div class="col-xs-4 col-md-2" style="background-color: #F2F2F2;"><font style="font-size: 18px;">产品中心</font></div>
-		<div class="col-xs-8 col-md-10" style="background-color: #F2F2F2;"><font style="font-size: 18px;float: right; color: #ccc">更多 》》</font></div>
+	<div class="row" style="background-color: #F2F2F2;">
+		<div class="col-xs-4 col-md-12" style="padding-top: 10px;padding-left: 10px;padding-bottom: 10px;"><font style="font-size: 18px;">产品中心</font></div>
+		<!--<div class="col-xs-8 col-md-10" style="background-color: #F2F2F2;padding: 10px;"><font style="font-size: 18px;float: right; color: #ccc">更多 》》</font></div>-->
 	</div>
 	<div class="row">
 		<div class="col-md-2">

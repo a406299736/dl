@@ -39,15 +39,13 @@ ul li a {
 }
 /*****固定头部**********/
 .menu_header{
-    width:100%;
-    z-index:99;
-    background-color: white;
 }
 .menuFixed{
+    width: 1140px;
     position:fixed;
+    margin: 0 auto;
     top:0;
-    left:0;
-    height: 1px;
+    z-index: 10000;
 }
 #menu_wrap_header{
     height:50px;

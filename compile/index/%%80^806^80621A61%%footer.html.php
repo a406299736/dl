@@ -1,9 +1,9 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-05 17:06:57
+<?php /* Smarty version 2.6.28, created on 2017-04-10 13:59:41
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),)), $this); ?>
 <div style="height: 30px;"></div>
-<footer class="foot-wrap panel-footer">
+<!--<footer class="foot-wrap panel-footer">
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-xs-12 col-md-2">
@@ -91,7 +91,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 
 <hr>
 <footer class="main-footer bg-primary">
@@ -104,6 +104,12 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
                         <p>© 2015 北京德隆伟烨科技发展有限公司  &nbsp;&nbsp;版权所有 &nbsp;&nbsp; 京ICP备15001670号 &nbsp;&nbsp; 京公网安备11010802015957</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p></p>
+                <p>地址: 北京市朝阳区小红门鸿博家园C区7号楼 邮编：100176 电话：010-57123699    13910067271 E-mail:shangwu@dlwy.cn</p>
             </div>
         </div>
         <div class="row">
