@@ -1,72 +1,93 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-01 15:32:29
+<?php /* Smarty version 2.6.28, created on 2017-04-05 17:06:57
          compiled from footer.html */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),)), $this); ?>
 <div style="height: 30px;"></div>
 <footer class="foot-wrap panel-footer">
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-xs-12 col-md-2">
-                <strong><a>关于我们</a></strong>
+                <?php echo smarty_function_menu(array('classid' => 122,'child' => 1), $this);?>
+
+                <strong><a href="/index.php?m=list&a=index&classid=142">关于我们</a></strong>
                 <p></p>
                 <ul class="list-unstyled">
-                    <li><a>公司简介</a></li>
-                    <li><a>企业文化</a></li>
-                    <li><a>组织架构</a></li>
-                    <li><a>商业咨询</a></li>
+                <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                <li><a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
+"><?php echo $this->_tpl_vars['v']['classname']; ?>
+</a></li>
+                <?php endforeach; endif; unset($_from); ?>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-2">
-                <strong><a>解决方案</a></strong>
+                <?php echo smarty_function_menu(array('classid' => 123,'num' => 5,'child' => 1), $this);?>
+
+                <strong><a href="/index.php?m=list&a=index&classid=166">解决方案</a></strong>
                 <p></p>
                 <ul class="list-unstyled">
-                    <li><a>智慧城市</a></li>
-                    <li><a>公共安全</a></li>
-                    <li><a>智能楼宇</a></li>
-                    <li><a>数据中心</a></li>
-                    <li><a>信息安全</a></li>
+                    <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                    <li><a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
+"><?php echo $this->_tpl_vars['v']['classname']; ?>
+</a></li>
+                    <?php endforeach; endif; unset($_from); ?>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-2">
-                <strong><a>工程业绩</a></strong>
+                <?php echo smarty_function_menu(array('classid' => 124,'num' => 6,'child' => 1), $this);?>
+
+                <strong><a href="/index.php?m=list&a=index&classid=155">工程业绩</a></strong>
                 <p></p>
                 <ul class="list-unstyled">
-                    <li><a>行业用户</a></li>
-                    <li><a>智慧社区工程</a></li>
-                    <li><a>数据中心工程</a></li>
-                    <li><a>公共安全工程</a></li>
+                    <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                    <li><a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
+"><?php echo $this->_tpl_vars['v']['classname']; ?>
+</a></li>
+                    <?php endforeach; endif; unset($_from); ?>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-2">
-                <strong><a>新闻中心</a></strong>
+                <?php echo smarty_function_menu(array('classid' => 148,'child' => 1), $this);?>
+
+                <strong><a href="/index.php?m=list&a=index&classid=146">新闻中心</a></strong>
                 <p></p>
                 <ul class="list-unstyled">
-                    <li><a>时事新闻</a></li>
-                    <li><a>智能行业</a></li>
-                    <li><a>公共安全</a></li>
-                    <li><a>数据中心</a></li>
-                    <li><a>节能环保</a></li>
+                    <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                    <li><a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
+"><?php echo $this->_tpl_vars['v']['classname']; ?>
+</a></li>
+                    <?php endforeach; endif; unset($_from); ?>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-2">
-                <strong><a>招聘信息</a></strong>
+                <?php echo smarty_function_menu(array('classid' => 159,'child' => 1), $this);?>
+
+                <strong><a href="/index.php?m=list&a=index&classid=160">招聘信息</a></strong>
                 <p></p>
                 <ul class="list-unstyled">
-                    <li><a>项目经理</a></li>
-                    <li><a>弱电工长</a></li>
-                    <li><a>工程师</a></li>
-                    <li><a>商务经理</a></li>
-                    <li><a>施工员</a></li>
+                    <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                    <li><a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
+"><?php echo $this->_tpl_vars['v']['classname']; ?>
+</a></li>
+                    <?php endforeach; endif; unset($_from); ?>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-2">
                 <strong>联系我们</strong>
                 <p></p>
-                <ul class="list-unstyled">
-                    <li>地址：北京市朝阳区小红门鸿博家园C区7号楼</li>
-                    <li>邮编：100176</li>
-                    <li>电话：010-57123699    13910067271</li>
-                    <li>传真:  010-52461182</li>
-                    <li>E-mail:shangwu@dlwy.cn</li>
-                </ul>
+                        <?php echo smarty_function_single(array('classid' => 165), $this);?>
+
+                        <?php echo $this->_tpl_vars['single_data']['content']; ?>
+
             </div>
         </div>
     </div>

@@ -10,7 +10,32 @@
 
 <script type="text/javascript" src="<{$weburl}>template/delong/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<{$weburl}>template/delong/js/js.js"></script>
-
+    <style>
+        .fy span {
+            display: block;
+            float: left;
+            font-size: 12px;
+            border: 1px #d7d6d6 solid;
+            height: 24px;
+            line-height: 24px;
+            background: #00669b;
+            color: #FFF;
+            padding: 0px 15px;
+            margin: 0px 3px;
+        }
+        .fy a {
+            display: block;
+            float: left;
+            color: #a6a4a4;
+            font-size: 12px;
+            border: 1px #d7d6d6 solid;
+            height: 24px;
+            line-height: 24px;
+            padding: 0px 15px;
+            background: #FFF;
+            margin: 0px 3px;
+        }
+    </style>
 </head>
 <body>
 <{include file='header.html'}>
@@ -72,9 +97,10 @@
             <{/foreach}>
             </div>
 
-            <nav aria-label="Page navigation">
+            <div style="height: 10px;"></div>
+            <div class="fy">
                 <{$page}>
-            </nav>
+            </div>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2016-11-15 23:11:53
+<?php /* Smarty version 2.6.28, created on 2017-04-05 17:00:51
          compiled from zpxx_left.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'zpxx_left.html', 5, false),array('function', 'single', 'zpxx_left.html', 17, false),)), $this); ?>

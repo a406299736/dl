@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-01 18:55:52
+<?php /* Smarty version 2.6.28, created on 2017-04-07 19:39:41
          compiled from single/gywm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/gywm.html', 38, false),array('function', 'single', 'single/gywm.html', 56, false),)), $this); ?>
@@ -87,7 +87,7 @@ template/delong/images/about01.jpg" />
             <span class="pull-right hidden-xs"><?php echo $this->_tpl_vars['navpos']; ?>
 </span>
             <hr>
-            <span style="font-size: 14px;"><?php echo $this->_tpl_vars['classcontent']; ?>
+            <span class="img-res" style="font-size: 14px;"><?php echo $this->_tpl_vars['classcontent']; ?>
 </span>
         </div>
     </div>

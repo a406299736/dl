@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-01 18:32:34
+<?php /* Smarty version 2.6.28, created on 2017-04-07 20:23:23
          compiled from header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 33, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 31, false),)), $this); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/css/style.css">
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
@@ -25,21 +25,19 @@ template/delong/images/logo.jpg"></a></div>
         </div>
     </div>
 </div>
-<div id='menu_wrap_header'>
+<div class="container" id='menu_wrap_header'>
     <div class='menu_header'>
-        <nav class = "navbar navbar-default" role = "navigation" style="background-color: #04498f;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle pull-left" data-toggle="collapse"  data-target="#target-menu">
-                    <span  class="sr-only">Tag Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="target-menu" style="position: absolute;z-index: 999999;">
+        <nav class = "navbar navbar-default" role = "navigation" style="background-color: #04498f;z-index: 999999;width: 100%">
+            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse"  data-target="#target-menu">
+                <span  class="sr-only">Tag Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="target-menu" style="position: relative;z-index: 999999;">
                 <?php echo smarty_function_menu(array('child' => 1), $this);?>
 
-                <ul class="nav navbar-nav custom-nav-bg" style="margin-left: 40px;">
+                <ul class="nav navbar-nav custom-nav-bg">
                     <li><a href="<?php echo $this->_tpl_vars['weburl']; ?>
 " title="首页"<?php if ($this->_tpl_vars['classid'] == 'home'): ?> class="active"<?php endif; ?> style="color: white">首页</a></li>
                     <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
@@ -67,9 +65,16 @@ template/delong/images/logo.jpg"></a></div>
                             <?php endif; ?>
                         </li>
                     <?php endforeach; endif; unset($_from); ?>
+                    <li>
+                        <a href="javascript:void(0);" onclick="cli()" class="glyphicon glyphicon-search" style="margin-left: 30px;"></a>
+                    </li>
                 </ul>
             </div>
         </nav>
+        <div class="input-group sh" style="display:none;z-index: 999999;">
+            <input type="text" class="form-control input-lg" id="searchVal">
+            <span class="input-group-addon btn btn-primary" onclick="sear(this)">搜索</span>
+        </div>
     </div>
 </div>
 
@@ -90,7 +95,7 @@ template/delong/images/logo.jpg"></a></div>
     </div>
 </div>
 
-
+<div style="height: 15px;"></div>
  <script type="text/javascript">
  
 function SetHome(obj,url){
@@ -133,6 +138,8 @@ $(window).scroll(function () {
     else {
         $('.menu_header').removeClass('menuFixed')
     }
+
+    $('.img-res img').addClass('img-responsive center-block');
 });
 
 $(function(){
@@ -147,4 +154,19 @@ $(function(){
         $('#aFloatTools_Hide').hide();
     });
 });
+
+function cli()
+{
+    var sh = $('.sh');
+    if (sh.css('display') == 'none') {
+        sh.show();
+    } else {
+        sh.hide();
+    }
+}
+function sear(obj)
+{
+    alert('暂时无法搜索');
+    console.log($('#searchVal').val());
+}
 </script>

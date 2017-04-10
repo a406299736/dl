@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-05 11:01:26
+<?php /* Smarty version 2.6.28, created on 2017-04-05 17:28:30
          compiled from column/dl_tulist.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'column/dl_tulist.html', 35, false),array('function', 'single', 'column/dl_tulist.html', 53, false),array('modifier', 'lmxstr', 'column/dl_tulist.html', 68, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'column/dl_tulist.html', 60, false),array('function', 'single', 'column/dl_tulist.html', 78, false),array('modifier', 'lmxstr', 'column/dl_tulist.html', 93, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +20,32 @@ _<?php echo $this->_tpl_vars['webname']; ?>
 template/delong/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/js/js.js"></script>
-
+    <style>
+        .fy span {
+            display: block;
+            float: left;
+            font-size: 12px;
+            border: 1px #d7d6d6 solid;
+            height: 24px;
+            line-height: 24px;
+            background: #00669b;
+            color: #FFF;
+            padding: 0px 15px;
+            margin: 0px 3px;
+        }
+        .fy a {
+            display: block;
+            float: left;
+            color: #a6a4a4;
+            font-size: 12px;
+            border: 1px #d7d6d6 solid;
+            height: 24px;
+            line-height: 24px;
+            padding: 0px 15px;
+            background: #FFF;
+            margin: 0px 3px;
+        }
+    </style>
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -101,10 +126,11 @@ template/delong/images/about01.jpg" style="width: 100%" />
             <?php endforeach; endif; unset($_from); ?>
             </div>
 
-            <nav aria-label="Page navigation">
+            <div style="height: 10px;"></div>
+            <div class="fy">
                 <?php echo $this->_tpl_vars['page']; ?>
 
-            </nav>
+            </div>
         </div>
     </div>
 </div>

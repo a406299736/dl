@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-01 18:32:35
+<?php /* Smarty version 2.6.28, created on 2017-04-10 12:13:51
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 24, false),array('modifier', 'lmxstr', 'index.html', 54, false),array('modifier', 'date_format', 'index.html', 54, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 68, false),array('modifier', 'lmxstr', 'index.html', 52, false),array('modifier', 'date_format', 'index.html', 52, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -21,15 +21,18 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 
+<div class="container">
 <div id="myCarousel" class="carousel slide">
 	<!-- 轮播（Carousel）指标 -->
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		<li data-target="#myCarousel" data-slide-to="1"></li>
 		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+		<li data-target="#myCarousel" data-slide-to="4"></li>
 	</ol>
 	<!-- 轮播（Carousel）项目 -->
-	<div class="carousel-inner" style="height: auto">
+	<div class="carousel-inner">
 		<?php echo smarty_function_article(array('classid' => 55,'num' => 5), $this);?>
 
 		<?php  $i=1;  ?>
@@ -39,24 +42,19 @@ if ($this->_foreach['lunbo_s']['total'] > 0):
         $this->_foreach['lunbo_s']['iteration']++;
 ?>
 			<div class="item <?php  if ($i==1) {echo 'active';}  ?>">
-				<img class="img-responsive img-wd" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
+				<img class="img-responsive" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
 ">
 			</div>
 		<?php  $i++;  ?>
 		<?php endforeach; endif; unset($_from); ?>
 	</div>
 	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-control left" href="#myCarousel"
-	   data-slide="prev">&lsaquo;
-	</a>
-	<a class="carousel-control right" href="#myCarousel"
-	   data-slide="next">&rsaquo;
-	</a>
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-<div style="height: 1px;"></div>
-<div class="custom-news-bg">
-	<div class="container">
+	<div style="height: 1px;"></div>
+	<div class="container custom-news-bg">
 		<div class="row">
 			<div class="col-xs-5 col-md-2 col-lg-2 col-lg-offset-1" style="padding-top: 7px;">
 				公司新闻 &nbsp;
@@ -82,46 +80,134 @@ if ($this->_foreach['product_s']['total'] > 0):
 			</div>
 		</div>
 	</div>
-</div>
 
-<div style="height: 30px;"></div>
-<div class="container">
-	<div class="row">
-		<div id="scroll_div_more" class="col-lg-10 col-lg-offset-1">
-			<div id="scroll_begin_more">
-				<a href="/index.php?m=list&a=index&classid=219">
-					<img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp01.jpg" style="margin: 10px;" title="公共广播">
-				</a>
-					<a href="/index.php?m=list&a=index&classid=218">
-						<img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp02.jpg" style="margin: 10px;"/>
-					</a>
-
-				<a href="/index.php?m=list&a=index&classid=217"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp03.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=220"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp04.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=221"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp05.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=222"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp06.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=223"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp07.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=227"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp08.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=229"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/s_cp09.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=224"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/xg02.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=228"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/xg01.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=226"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/xg04.jpg" style="margin: 10px;"/></a>
-				<a href="/index.php?m=list&a=index&classid=225"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-template/delong/images/xg03.jpg" style="margin: 10px;"/></a>
+	<div style="height: 20px;"></div>
+	<div class="container bg-info">
+		<div class="row" style="padding-top: 25px;padding-bottom: 25px;">
+			<div class="col-xs-7 col-md-2">
+				<img class="img-responsive" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/about.jpg">
 			</div>
-			<div id="scroll_end_more"></div>
+			<div class="col-md-8">
+				<?php echo smarty_function_single(array('classid' => 142), $this);?>
+
+					<p>
+						<?php 
+							$a = $this->_tpl_vars['single_data']['content'];
+							echo mb_substr($a, 0, 500, 'utf-8') . '...';
+						 ?>
+					</p>
+			</div>
+			<div class="col-md-2">
+				<button type="button" class="btn btn-info" style="margin: 20px;"><a href="<?php echo $this->_tpl_vars['single_data']['classurl']; ?>
+">查看更多</a></button>
+			</div>
+		</div>
+	</div>
+
+<div style="height: 20px;"></div>
+	<div class="row" style="margin-left: 0px;">
+		<div class="col-xs-4 col-md-2" style="background-color: #F2F2F2;"><font style="font-size: 18px;">产品中心</font></div>
+		<div class="col-xs-8 col-md-10" style="background-color: #F2F2F2;"><font style="font-size: 18px;float: right; color: #ccc">更多 》》</font></div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=219">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp01.jpg" style="margin-top: 20px;" title="公共广播">
+				<p></p>
+				<p class="text-center"><strong>公共广播</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=218">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp02.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>视频会议</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=217">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp03.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>综合布线</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=220">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp04.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>机房建设</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=221">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp05.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>机房电话</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=222">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp06.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>安防监控</strong></p>
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=223">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp07.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>门禁考勤</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=227">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp08.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>收款系统</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=229">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/s_cp09.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>智能家居</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=224">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/xg02.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>网络安全</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=228">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/xg01.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>公共广播</strong></p>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="/index.php?m=list&a=index&classid=226">
+				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
+template/delong/images/xg04.jpg" style="margin-top: 20px;"/>
+				<p></p>
+				<p class="text-center"><strong>停车管理</strong></p>
+			</a>
 		</div>
 	</div>
 </div>
@@ -159,28 +245,5 @@ unset($_smarty_tpl_vars);
         }
     }
     ScrollImgLeft();
-
-    function ScrollImgLeftMore(){
-        var speedMore=50;
-        var MyMarMore = null;
-        var scroll_begin_more = document.getElementById("scroll_begin_more");
-        var scroll_end_more = document.getElementById("scroll_end_more");
-        var scroll_div_more = document.getElementById("scroll_div_more");
-        scroll_end_more.innerHTML=scroll_begin_more.innerHTML;
-        function MarqueeMore(){
-            if(scroll_end_more.offsetWidth-scroll_div_more.scrollLeft<=0)
-                scroll_div_more.scrollLeft-=scroll_begin_more.offsetWidth;
-            else
-                scroll_div_more.scrollLeft++;
-        }
-        MyMarMore=setInterval(MarqueeMore,speedMore);
-        scroll_div_more.onmouseover = function(){
-            clearInterval(MyMarMore);
-        };
-        scroll_div_more.onmouseout = function(){
-            MyMarMore = setInterval(MarqueeMore,speedMore);
-        };
-    }
-    ScrollImgLeftMore();
 </script>
 </html>
