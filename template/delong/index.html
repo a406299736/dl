@@ -28,7 +28,7 @@
 		<{php}> $i=1; <{/php}>
 		<{foreach from=$article_data item=v name=lunbo_s}>
 			<div class="item <{php}> if ($i==1) {echo 'active';} <{/php}>">
-				<img class="img-responsive" src="<{$v.lbpic}>">
+				<img class="img-responsive" style="min-height: 486px;" src="<{$v.lbpic}>">
 			</div>
 		<{php}> $i++; <{/php}>
 		<{/foreach}>
@@ -38,7 +38,6 @@
 	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-	<div style="height: 5px;"></div>
 		<div class="row custom-news-bg">
 			<div class="col-xs-5 col-md-2 col-lg-2 col-lg-offset-1" style="padding-top: 7px;">
 				公司新闻 &nbsp;

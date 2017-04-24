@@ -20,34 +20,34 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1">
+        <div class="col-sm-3 col-md-2 hidden-xs hidden-sm">
             <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
                 <li class="active">
 
                 </li>
-                <li>
-                    <a href="#guanyu" class="nav-header collapsed" data-toggle="collapse">
+                <li style="background-color: #eee">
+                    <a href="#" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-forward"></i>
                         <strong style="font-size: 16px">工程业绩</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <span class="pull-right"></span>
                     </a>
                     <{menu classid=123 child=1}>
-                    <ul id="guanyu" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="guanyu" class="nav nav-list open secondmenu" style="height: 0px;">
                         <{foreach from=$menu_data item=v}>
-                        <li>
+                        <li <{if ($v.classid eq $classid)}> class='bg-primary' <{/if}> style="margin-left:0px; text-align:center">
                             <a href="<{$v.classurl}>"<{if ($v.classid eq $topid || $v.classid eq $classid) && $classid != 4}> id='active1'<{/if}>><{$v.classname}></a>
                             </a>
                         </li>
                         <{/foreach}>
                     </ul>
                 </li>
-                <li>
-                    <a href="#lianxi" class="nav-header collapsed" data-toggle="collapse">
+                <li style="margin-top: 250px; background-color: #eee">
+                    <a href="#" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-forward"></i>
                         <strong style="font-size: 16px;">联系我们</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <span class="pull-right"></span>
                     </a>
-                    <ul id="lianxi" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <{single classid=165}>
                             <{$single_data.content}>
@@ -56,14 +56,14 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-9" style="margin-top: 3px;">
+        <div class="col-md-10" style="margin-top: 3px;padding: 0 30px;">
             <span class="pull-right hidden-xs"><{$navpos}></span>
             <hr>
             <span class="img-res" style="font-size: 14px;"><{$classcontent}></span>
         </div>
     </div>
 </div>
-
+<div style="height: 80px;"></div>
 <{include file='footer.html'}>
 </body>
 </html>

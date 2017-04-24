@@ -21,8 +21,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1">
-            <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1 hidden-xs hidden-sm">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked">
                 <li class="active">
 
                 </li>
@@ -33,22 +33,22 @@
                         <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <{menu classid=123 child=1}>
-                    <ul id="guanyu" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="guanyu" class="nav nav-list open secondmenu" style="height: 0px;">
                         <{foreach from=$menu_data item=v}>
-                        <li>
+                        <li <{if ($v.classid eq $classid)}> class='bg-primary'<{/if}>>
                             <a href="<{$v.classurl}>"<{if ($v.classid eq $topid || $v.classid eq $classid) && $classid != 4}> id='active1'<{/if}>><{$v.classname}></a>
                             </a>
                         </li>
                         <{/foreach}>
                     </ul>
                 </li>
-                <li>
+                <li style="margin-top: 250px;">
                     <a href="#lianxi" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-forward"></i>
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
-                    <ul id="lianxi" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <{single classid=165}>
                             <{$single_data.content}>
@@ -64,6 +64,7 @@
         </div>
     </div>
 </div>
+<div style="height: 80px;"></div>
 
 <{include file='footer.html'}>
 </body>

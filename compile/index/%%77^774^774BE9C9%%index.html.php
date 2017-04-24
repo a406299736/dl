@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-10 15:01:08
+<?php /* Smarty version 2.6.28, created on 2017-04-18 19:42:40
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 65, false),array('modifier', 'lmxstr', 'index.html', 51, false),array('modifier', 'date_format', 'index.html', 51, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 64, false),array('modifier', 'lmxstr', 'index.html', 50, false),array('modifier', 'date_format', 'index.html', 50, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -42,7 +42,7 @@ if ($this->_foreach['lunbo_s']['total'] > 0):
         $this->_foreach['lunbo_s']['iteration']++;
 ?>
 			<div class="item <?php  if ($i==1) {echo 'active';}  ?>">
-				<img class="img-responsive" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
+				<img class="img-responsive" style="min-height: 486px;" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
 ">
 			</div>
 		<?php  $i++;  ?>
@@ -53,7 +53,6 @@ if ($this->_foreach['lunbo_s']['total'] > 0):
 	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-	<div style="height: 5px;"></div>
 		<div class="row custom-news-bg">
 			<div class="col-xs-5 col-md-2 col-lg-2 col-lg-offset-1" style="padding-top: 7px;">
 				公司新闻 &nbsp;

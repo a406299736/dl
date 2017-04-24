@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-05 12:22:16
+<?php /* Smarty version 2.6.28, created on 2017-04-19 19:59:30
          compiled from single/zxly.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/zxly.html', 119, false),array('function', 'single', 'single/zxly.html', 137, false),)), $this); ?>
@@ -120,24 +120,24 @@ template/delong/images/about01.jpg" style="width: 100%" />
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1">
+        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1 hidden-xs hidden-sm">
             <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
                 <li class="active">
 
                 </li>
-                <li>
+                <li style="background-color: #eee">
                     <a href="#guanyu" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-forward"></i>
                         <strong style="font-size: 16px">联系我们</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <span class="pull-right"></span>
                     </a>
                     <?php echo smarty_function_menu(array('classid' => 128,'child' => 1), $this);?>
 
-                    <ul id="guanyu" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="guanyu" class="nav nav-list open secondmenu" style="height: 0px;">
                         <?php $_from = $this->_tpl_vars['menu_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['v']):
 ?>
-                        <li>
+                        <li <?php if (( $this->_tpl_vars['v']['classid'] == $this->_tpl_vars['classid'] )): ?> class='bg-primary'<?php endif; ?> style="margin-left:0px; text-align:center">
                             <a href="<?php echo $this->_tpl_vars['v']['classurl']; ?>
 "<?php if (( $this->_tpl_vars['v']['classid'] == $this->_tpl_vars['topid'] || $this->_tpl_vars['v']['classid'] == $this->_tpl_vars['classid'] ) && $this->_tpl_vars['classid'] != 4): ?> id='active1'<?php endif; ?>><?php echo $this->_tpl_vars['v']['classname']; ?>
 </a>
@@ -146,13 +146,13 @@ template/delong/images/about01.jpg" style="width: 100%" />
                         <?php endforeach; endif; unset($_from); ?>
                     </ul>
                 </li>
-                <li>
+                <li style="margin-top:100px;background-color: #eee">
                     <a href="#lianxi" class="nav-header collapsed" data-toggle="collapse">
                         <i class="glyphicon glyphicon-forward"></i>
                         <strong style="font-size: 16px;">联系我们</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <span class="pull-right"></span>
                     </a>
-                    <ul id="lianxi" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                    <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <?php echo smarty_function_single(array('classid' => 165), $this);?>
 
@@ -163,7 +163,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
             </ul>
         </div>
-        <div class="col-md-9" style="margin-top: 3px;">
+        <div class="col-md-9" style="margin-top: 3px;padding: 0 30px;">
             <span class="pull-right hidden-xs"><?php echo $this->_tpl_vars['navpos']; ?>
 </span>
             <hr>

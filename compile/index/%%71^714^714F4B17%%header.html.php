@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-10 15:55:10
+<?php /* Smarty version 2.6.28, created on 2017-04-17 19:31:46
          compiled from header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 37, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'header.html', 45, false),)), $this); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/css/style.css">
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
@@ -13,7 +13,15 @@ template/delong/css/style.css">
         margin-left: 0px;
         margin-right: 0px;
     }
+
+    .navbar .nav > li .dropdown-menu {
+        margin: 0;
+    }
+    .navbar .nav > li:hover .dropdown-menu {
+        display: block;
+    }
 </style>
+
 <!--代码部分begin-->
 <div class="container bd">
     <div class="row">
