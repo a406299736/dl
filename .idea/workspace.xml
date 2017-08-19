@@ -3,25 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa6b12c3-bd79-4ac3-9950-7eb2c2bae480" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%19^19A^19A6B3C1%%rlzx.html.php" afterPath="$PROJECT_DIR$/compile/index/%%19^19A^19A6B3C1%%rlzx.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%4C^4C7^4C76FFC6%%jjfa.html.php" afterPath="$PROJECT_DIR$/compile/index/%%4C^4C7^4C76FFC6%%jjfa.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%66^66E^66EA9120%%dl_tulist.html.php" afterPath="$PROJECT_DIR$/compile/index/%%66^66E^66EA9120%%dl_tulist.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%75^757^75707A30%%ywly.html.php" afterPath="$PROJECT_DIR$/compile/index/%%75^757^75707A30%%ywly.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%80^806^80621A61%%footer.html.php" afterPath="$PROJECT_DIR$/compile/index/%%80^806^80621A61%%footer.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%95^95D^95DD5459%%zxly.html.php" afterPath="$PROJECT_DIR$/compile/index/%%95^95D^95DD5459%%zxly.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%B7^B79^B799E71B%%lxwm.html.php" afterPath="$PROJECT_DIR$/compile/index/%%B7^B79^B799E71B%%lxwm.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%C7^C70^C70D6AF9%%zyfw.html.php" afterPath="$PROJECT_DIR$/compile/index/%%C7^C70^C70D6AF9%%zyfw.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/index/%%F9^F96^F9667958%%gywm.html.php" afterPath="$PROJECT_DIR$/compile/index/%%F9^F96^F9667958%%gywm.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/db.inc.php" afterPath="$PROJECT_DIR$/inc/db.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/column/dl_tulist.html" afterPath="$PROJECT_DIR$/template/delong/column/dl_tulist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/footer.html" afterPath="$PROJECT_DIR$/template/delong/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/gywm.html" afterPath="$PROJECT_DIR$/template/delong/single/gywm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/jjfa.html" afterPath="$PROJECT_DIR$/template/delong/single/jjfa.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/lxwm.html" afterPath="$PROJECT_DIR$/template/delong/single/lxwm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/rlzx.html" afterPath="$PROJECT_DIR$/template/delong/single/rlzx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/ywly.html" afterPath="$PROJECT_DIR$/template/delong/single/ywly.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/zxly.html" afterPath="$PROJECT_DIR$/template/delong/single/zxly.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/delong/single/zyfw.html" afterPath="$PROJECT_DIR$/template/delong/single/zyfw.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +23,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="126">
               <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -53,8 +35,8 @@
       <file leaf-file-name="lxwm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/lxwm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+            <state relative-caret-position="287">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#strong#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,8 +50,8 @@
       <file leaf-file-name="zxly.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/zxly.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="149" column="16" lean-forward="true" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
+            <state relative-caret-position="1584">
+              <caret line="149" column="16" lean-forward="false" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -78,7 +60,7 @@
       <file leaf-file-name="rlzx.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/rlzx.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
+            <state relative-caret-position="1278">
               <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -90,7 +72,7 @@
       <file leaf-file-name="zyfw.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/zyfw.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
+            <state relative-caret-position="1314">
               <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -102,7 +84,7 @@
       <file leaf-file-name="jjfa.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/jjfa.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="1296">
               <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -124,7 +106,7 @@
       <file leaf-file-name="dl_tulist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/column/dl_tulist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="2016">
               <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -138,7 +120,7 @@
       <file leaf-file-name="ywly.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/ywly.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="1296">
               <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -153,7 +135,7 @@
       <file leaf-file-name="gywm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/single/gywm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="1008">
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -201,8 +183,8 @@
       <file leaf-file-name="db.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/db.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -211,7 +193,7 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/delong/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1667">
+            <state relative-caret-position="0">
               <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -314,8 +296,8 @@
         <option value="$PROJECT_DIR$/template/delong/single/jjfa.html" />
         <option value="$PROJECT_DIR$/template/delong/single/zyfw.html" />
         <option value="$PROJECT_DIR$/template/delong/single/rlzx.html" />
-        <option value="$PROJECT_DIR$/template/delong/single/lxwm.html" />
         <option value="$PROJECT_DIR$/template/delong/single/zxly.html" />
+        <option value="$PROJECT_DIR$/template/delong/single/lxwm.html" />
         <option value="$PROJECT_DIR$/inc/db.inc.php" />
       </list>
     </option>
@@ -355,7 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -439,7 +421,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -583,12 +565,13 @@
       <workItem from="1493790524042" duration="4304000" />
       <workItem from="1493883000762" duration="16000" />
       <workItem from="1503114854625" duration="6635000" />
-      <workItem from="1503123438362" duration="1331000" />
+      <workItem from="1503123438362" duration="1469000" />
+      <workItem from="1503125413001" duration="31000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92906000" />
+    <option name="totallyTimeSpent" value="93075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="719" extended-state="0" />
@@ -866,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="72" column="12" lean-forward="true" selection-start-line="61" selection-start-column="6" selection-end-line="72" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="133" column="2" lean-forward="false" selection-start-line="133" selection-start-column="2" selection-end-line="133" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
+        <state relative-caret-position="126">
           <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -933,7 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1667">
+        <state relative-caret-position="0">
           <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -946,7 +926,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/gywm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
+        <state relative-caret-position="1008">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -963,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/ywly.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="1296">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -976,7 +956,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/column/dl_tulist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="2016">
           <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -988,7 +968,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/jjfa.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="1296">
           <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -998,7 +978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/zyfw.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
+        <state relative-caret-position="1314">
           <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1008,7 +988,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/rlzx.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
+        <state relative-caret-position="1278">
           <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1016,10 +996,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/delong/single/zxly.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="149" column="16" lean-forward="false" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/delong/single/lxwm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+        <state relative-caret-position="287">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#strong#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1029,18 +1017,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/delong/single/zxly.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="149" column="16" lean-forward="true" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/db.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
