@@ -17,9 +17,11 @@
 <body>
 
 <{include file='header.html'}>
-
-<img class="img-responsive" style="width: 100%" src="<{$weburl}>template/delong/images/about01.jpg" />
-
+<div class="container">
+    <div class="row">
+        <img class="img-responsive" style="width: 100%" src="<{$weburl}>template/delong/images/about01.jpg" />
+    </div>
+</div>
 <div style="height: 15px;"></div>
 <!--右侧导航-->
 <div class="container">
@@ -31,7 +33,7 @@
                 </li>
                 <li style="background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">关于我们</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -47,11 +49,12 @@
                 </li>
                 <li style="margin-top: 166px; background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>
                     <ul id="lianxi" class="nav nav-list secondmenu" style="height: 0px;">
+                        <li><img src="template/delong/images/contact-us.jpg" alt=""></li>
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <{single classid=165}>
                             <{$single_data.content}>

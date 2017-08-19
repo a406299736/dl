@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-17 19:03:15
+<?php /* Smarty version 2.6.28, created on 2017-08-19 13:38:27
          compiled from single/ywly.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/ywly.html', 35, false),array('function', 'single', 'single/ywly.html', 53, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/ywly.html', 38, false),array('function', 'single', 'single/ywly.html', 56, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -29,23 +29,26 @@ $this->_smarty_include(array('smarty_include_tpl_file' => 'header.html', 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-
-<img class="img-responsive" style="width: 100%"  src="<?php echo $this->_tpl_vars['weburl']; ?>
+<div class="container">
+    <div class="row">
+    <img class="img-responsive" style="width: 100%"  src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" />
+    </div></div>
 <div style="height: 15px;"></div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1 hidden-xs hidden-sm">
+        <div class="col-sm-3 col-md-2 hidden-xs hidden-sm">
             <ul id="main-nav" class="nav nav-tabs nav-stacked">
                 <li class="active">
 
                 </li>
-                <li>
+                <li style="background-color: #eee">
                     <a href="#guanyu" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">业务领域</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <!--<span class="pull-right glyphicon glyphicon-chevron-down"></span>-->
+                        <span class="pull-right"></span>
                     </a>
                     <?php echo smarty_function_menu(array('classid' => 123,'child' => 1), $this);?>
 
@@ -62,11 +65,11 @@ template/delong/images/about01.jpg" />
                         <?php endforeach; endif; unset($_from); ?>
                     </ul>
                 </li>
-                <li style="margin-top: 250px;">
+                <li style="margin-top: 250px;background-color: #eee">
                     <a href="#lianxi" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
-                        <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                        <span class="pull-right"></span>
                     </a>
                     <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">

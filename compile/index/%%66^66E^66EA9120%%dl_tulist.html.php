@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-19 20:17:57
+<?php /* Smarty version 2.6.28, created on 2017-08-19 13:38:53
          compiled from column/dl_tulist.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'column/dl_tulist.html', 60, false),array('function', 'single', 'column/dl_tulist.html', 78, false),array('modifier', 'lmxstr', 'column/dl_tulist.html', 93, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'column/dl_tulist.html', 62, false),array('function', 'single', 'column/dl_tulist.html', 80, false),array('modifier', 'lmxstr', 'column/dl_tulist.html', 95, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -53,9 +53,11 @@ $this->_smarty_include(array('smarty_include_tpl_file' => 'header.html', 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-
-<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+<div class="container">
+    <div class="row">
+        <img src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" style="width: 100%" />
+    </div></div>
 
 <div style="height: 15px;"></div>
 
@@ -68,7 +70,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
                 <li style="background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">工程业绩</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -89,7 +91,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
                 <li style="margin-top: 166px;background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -112,7 +114,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
             <?php $_from = $this->_tpl_vars['list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['v']):
 ?>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-sm-4 col-md-4">
                         <a href="<?php echo $this->_tpl_vars['v']['url']; ?>
 ">
                             <img class="img-responsive" src="<?php echo $this->_tpl_vars['v']['tupianlb']; ?>

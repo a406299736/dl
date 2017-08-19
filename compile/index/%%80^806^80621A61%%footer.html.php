@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-10 18:32:06
+<?php /* Smarty version 2.6.28, created on 2017-08-19 12:57:47
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),array('function', 'link', 'footer.html', 70, false),)), $this); ?>
 <div style="height: 30px;"></div>
 <!--<footer class="foot-wrap panel-footer">
     <div class="container-fluid text-center">
@@ -94,11 +94,33 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
 </footer>-->
 
 <hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul style="list-style-type:none;">
+                <?php echo smarty_function_link(array('num' => 10), $this);?>
+
+                <?php $_from = $this->_tpl_vars['link_data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['v']):
+?>
+                    <!--<div class="apply_img"><a href="<?php echo $this->_tpl_vars['v']['url']; ?>
+"><img src="<?php echo $this->_tpl_vars['v']['img']; ?>
+" /><?php echo $this->_tpl_vars['v']['name']; ?>
+</a></div>-->
+                    <li style="float: left;margin-right: 5px;"><a href="<?php echo $this->_tpl_vars['v']['url']; ?>
+"><img src="<?php echo $this->_tpl_vars['v']['img']; ?>
+" /></a></li>
+                <?php endforeach; endif; unset($_from); ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="height: 5px;"></div>
 <footer class="main-footer bg-primary">
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="widget">
@@ -111,15 +133,15 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
                 <div class="row">
                     <div class="col-sm-12">
                         <p></p>
-                        <p>地址: 北京市朝阳区小红门鸿博家园C区7号楼 邮编：100176 电话：010-57123699    13910067271 E-mail:shangwu@dlwy.cn</p>
+                        <p class="text-center">地址: 北京市朝阳区小红门鸿博家园C区7号楼 邮编：100176 电话：010-57123699    13910067271 E-mail:shangwu@dlwy.cn</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 text-center">
+            <!--<div class="col-md-3 text-center">
                 <div class="widget">
                     <img class="img-responsive center-block" src="/dlwywx.jpg" style="width: 30%; height: 30%;"/>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <div style="height: 10px;"></div>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-19 20:16:52
+<?php /* Smarty version 2.6.28, created on 2017-08-19 13:39:40
          compiled from single/zyfw.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/zyfw.html', 36, false),array('function', 'single', 'single/zyfw.html', 54, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/zyfw.html', 38, false),array('function', 'single', 'single/zyfw.html', 56, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -29,9 +29,11 @@ $this->_smarty_include(array('smarty_include_tpl_file' => 'header.html', 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-
-<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+<div class="container">
+    <div class="row">
+        <img src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" style="width: 100%" />
+    </div></div>
 
 <div style="height: 15px;"></div>
 
@@ -44,7 +46,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
                 <li style="background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">专业服务</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -65,7 +67,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
                 <li style="margin-top: 166px; background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>

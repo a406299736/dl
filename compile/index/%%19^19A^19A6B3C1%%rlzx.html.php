@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-18 20:35:35
+<?php /* Smarty version 2.6.28, created on 2017-08-19 13:40:03
          compiled from single/rlzx.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/rlzx.html', 36, false),array('function', 'single', 'single/rlzx.html', 54, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/rlzx.html', 38, false),array('function', 'single', 'single/rlzx.html', 56, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -29,22 +29,24 @@ $this->_smarty_include(array('smarty_include_tpl_file' => 'header.html', 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-
-<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+<div class="container">
+    <div class="row">
+        <img src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" style="width: 100%" />
+    </div></div>
 
 <div style="height: 15px;"></div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 col-sx-offset-1 col-md-offset-1 hidden-xs hidden-sm">
+        <div class="col-sm-3 col-md-2 hidden-xs hidden-sm">
             <ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
                 <li class="active">
 
                 </li>
                 <li style="background-color: #eee">
-                    <a href="#guanyu" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                    <a href="#" class="nav-header collapsed" data-toggle="collapse">
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">人力资源</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -64,8 +66,8 @@ template/delong/images/about01.jpg" style="width: 100%" />
                     </ul>
                 </li>
                 <li style="margin-top: 100px;background-color: #eee">
-                    <a href="#lianxi" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                    <a href="#" class="nav-header collapsed" data-toggle="collapse">
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -80,7 +82,7 @@ template/delong/images/about01.jpg" style="width: 100%" />
                 </li>
             </ul>
         </div>
-        <div class="col-md-9" style="margin-top: 3px;padding: 0 30px;">
+        <div class="col-md-10" style="margin-top: 3px;padding: 0 30px;">
             <span class="pull-right hidden-xs"><?php echo $this->_tpl_vars['navpos']; ?>
 </span>
             <hr>

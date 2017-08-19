@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-18 19:42:40
+<?php /* Smarty version 2.6.28, created on 2017-08-19 11:56:50
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'article', 'index.html', 27, false),array('function', 'single', 'index.html', 64, false),array('modifier', 'lmxstr', 'index.html', 50, false),array('modifier', 'date_format', 'index.html', 50, false),)), $this); ?>
@@ -42,7 +42,7 @@ if ($this->_foreach['lunbo_s']['total'] > 0):
         $this->_foreach['lunbo_s']['iteration']++;
 ?>
 			<div class="item <?php  if ($i==1) {echo 'active';}  ?>">
-				<img class="img-responsive" style="min-height: 486px;" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
+				<img class="img-responsive" src="<?php echo $this->_tpl_vars['v']['lbpic']; ?>
 ">
 			</div>
 		<?php  $i++;  ?>
@@ -106,7 +106,7 @@ template/delong/images/about.jpg">
 		<!--<div class="col-xs-8 col-md-10" style="background-color: #F2F2F2;padding: 10px;"><font style="font-size: 18px;float: right; color: #ccc">更多 》》</font></div>-->
 	</div>
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=219">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp01.jpg" style="margin-top: 20px;" title="公共广播">
@@ -114,7 +114,7 @@ template/delong/images/s_cp01.jpg" style="margin-top: 20px;" title="公共广播
 				<p class="text-center"><strong>公共广播</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=218">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp02.jpg" style="margin-top: 20px;"/>
@@ -122,7 +122,7 @@ template/delong/images/s_cp02.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>视频会议</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=217">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp03.jpg" style="margin-top: 20px;"/>
@@ -130,7 +130,7 @@ template/delong/images/s_cp03.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>综合布线</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=220">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp04.jpg" style="margin-top: 20px;"/>
@@ -138,7 +138,7 @@ template/delong/images/s_cp04.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>机房建设</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=221">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp05.jpg" style="margin-top: 20px;"/>
@@ -146,7 +146,7 @@ template/delong/images/s_cp05.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>机房电话</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=222">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp06.jpg" style="margin-top: 20px;"/>
@@ -154,9 +154,7 @@ template/delong/images/s_cp06.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>安防监控</strong></p>
 			</a>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=223">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp07.jpg" style="margin-top: 20px;"/>
@@ -164,7 +162,7 @@ template/delong/images/s_cp07.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>门禁考勤</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=227">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp08.jpg" style="margin-top: 20px;"/>
@@ -172,7 +170,7 @@ template/delong/images/s_cp08.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>收款系统</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=229">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/s_cp09.jpg" style="margin-top: 20px;"/>
@@ -180,7 +178,7 @@ template/delong/images/s_cp09.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>智能家居</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=224">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/xg02.jpg" style="margin-top: 20px;"/>
@@ -188,7 +186,7 @@ template/delong/images/xg02.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>网络安全</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=228">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/xg01.jpg" style="margin-top: 20px;"/>
@@ -196,7 +194,7 @@ template/delong/images/xg01.jpg" style="margin-top: 20px;"/>
 				<p class="text-center"><strong>公共广播</strong></p>
 			</a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-xs-3 col-sm-3 col-md-2">
 			<a href="/index.php?m=list&a=index&classid=226">
 				<img class="img-responsive center-block" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/xg04.jpg" style="margin-top: 20px;"/>

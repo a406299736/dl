@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-04-19 20:13:20
+<?php /* Smarty version 2.6.28, created on 2017-08-19 13:51:21
          compiled from single/gywm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/gywm.html', 38, false),array('function', 'single', 'single/gywm.html', 56, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/gywm.html', 40, false),array('function', 'single', 'single/gywm.html', 59, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -32,10 +32,12 @@ $this->_smarty_include(array('smarty_include_tpl_file' => 'header.html', 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-
-<img class="img-responsive" style="width: 100%" src="<?php echo $this->_tpl_vars['weburl']; ?>
+<div class="container">
+    <div class="row">
+        <img class="img-responsive" style="width: 100%" src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" />
-
+    </div>
+</div>
 <div style="height: 15px;"></div>
 <!--右侧导航-->
 <div class="container">
@@ -47,7 +49,7 @@ template/delong/images/about01.jpg" />
                 </li>
                 <li style="background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">关于我们</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -68,11 +70,12 @@ template/delong/images/about01.jpg" />
                 </li>
                 <li style="margin-top: 166px; background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>
                     <ul id="lianxi" class="nav nav-list secondmenu" style="height: 0px;">
+                        <li><img src="template/delong/images/contact-us.jpg" alt=""></li>
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <?php echo smarty_function_single(array('classid' => 165), $this);?>
 

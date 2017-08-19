@@ -39,8 +39,10 @@
 </head>
 <body>
 <{include file='header.html'}>
-
-<img src="<{$weburl}>template/delong/images/about01.jpg" style="width: 100%" />
+<div class="container">
+    <div class="row">
+        <img src="<{$weburl}>template/delong/images/about01.jpg" style="width: 100%" />
+    </div></div>
 
 <div style="height: 15px;"></div>
 
@@ -53,7 +55,7 @@
                 </li>
                 <li style="background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px">工程业绩</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -69,7 +71,7 @@
                 </li>
                 <li style="margin-top: 166px;background-color: #eee">
                     <a href="#" class="nav-header collapsed" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-forward"></i>
+                        <!--<i class="glyphicon glyphicon-forward"></i>-->
                         <strong style="font-size: 16px;">联系我们</strong>
                         <span class="pull-right"></span>
                     </a>
@@ -87,7 +89,7 @@
             <hr>
             <div class="row">
             <{foreach from=$list item=v}>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-sm-4 col-md-4">
                         <a href="<{$v.url}>">
                             <img class="img-responsive" src="<{$v.tupianlb}>" />
                             <span><{$v.title|lmxstr:20:'...'}></span>
