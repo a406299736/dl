@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 13:40:48
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:45:27
          compiled from single/lxwm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/lxwm.html', 36, false),array('function', 'single', 'single/lxwm.html', 54, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/lxwm.html', 36, false),array('function', 'single', 'single/lxwm.html', 56, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -70,6 +70,8 @@ template/delong/images/about01.jpg" style="width: 100%"/>
                         <span class="pull-right"></span>
                     </a>
                     <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
+                        <li><img src="template/delong/images/contact-us.jpg" alt=""></li>
+
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <?php echo smarty_function_single(array('classid' => 165), $this);?>
 

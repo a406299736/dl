@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 13:38:27
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:41:08
          compiled from single/ywly.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/ywly.html', 38, false),array('function', 'single', 'single/ywly.html', 56, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/ywly.html', 38, false),array('function', 'single', 'single/ywly.html', 58, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -72,6 +72,8 @@ template/delong/images/about01.jpg" />
                         <span class="pull-right"></span>
                     </a>
                     <ul id="lianxi" class="nav nav-list open secondmenu" style="height: 0px;">
+                        <li><img src="template/delong/images/contact-us.jpg" alt=""></li>
+
                         <li  style="margin-left:5px;font-size: 12px; margin-top: 8px;">
                             <?php echo smarty_function_single(array('classid' => 165), $this);?>
 
@@ -91,7 +93,7 @@ template/delong/images/about01.jpg" />
         </div>
     </div>
 </div>
-<div style="height: 80px;"></div>
+<div style="height: 160px;"></div>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'footer.html', 'smarty_include_vars' => array()));

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 13:51:21
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:39:01
          compiled from single/gywm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/gywm.html', 40, false),array('function', 'single', 'single/gywm.html', 59, false),)), $this); ?>
@@ -95,7 +95,7 @@ template/delong/images/about01.jpg" />
         </div>
     </div>
 </div>
-<div style="height: 80px;"></div>
+<div style="height: 150px;"></div>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'footer.html', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

@@ -1,8 +1,7 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 12:57:47
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:23:01
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 6, false),array('function', 'single', 'footer.html', 58, false),array('function', 'link', 'footer.html', 70, false),)), $this); ?>
-<div style="height: 30px;"></div>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 5, false),array('function', 'single', 'footer.html', 57, false),array('function', 'link', 'footer.html', 69, false),)), $this); ?>
 <!--<footer class="foot-wrap panel-footer">
     <div class="container-fluid text-center">
         <div class="row">
