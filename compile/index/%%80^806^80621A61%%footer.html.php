@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 14:23:01
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:54:18
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'footer.html', 5, false),array('function', 'single', 'footer.html', 57, false),array('function', 'link', 'footer.html', 69, false),)), $this); ?>
@@ -107,7 +107,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'foo
 " /><?php echo $this->_tpl_vars['v']['name']; ?>
 </a></div>-->
                     <li style="float: left;margin-right: 5px;"><a href="<?php echo $this->_tpl_vars['v']['url']; ?>
-"><img src="<?php echo $this->_tpl_vars['v']['img']; ?>
+" target="_blank"><img src="<?php echo $this->_tpl_vars['v']['img']; ?>
 " /></a></li>
                 <?php endforeach; endif; unset($_from); ?>
             </ul>

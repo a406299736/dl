@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.28, created on 2017-08-19 14:45:27
+<?php /* Smarty version 2.6.28, created on 2017-08-19 14:54:17
          compiled from single/lxwm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'menu', 'single/lxwm.html', 36, false),array('function', 'single', 'single/lxwm.html', 56, false),)), $this); ?>
@@ -32,7 +32,7 @@ unset($_smarty_tpl_vars);
     <div class="row">
         <img src="<?php echo $this->_tpl_vars['weburl']; ?>
 template/delong/images/about01.jpg" style="width: 100%"/>
-    </div></div>s
+    </div></div>
 <div style="height: 15px;"></div>
 
 <div class="container">
