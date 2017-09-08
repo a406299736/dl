@@ -66,10 +66,11 @@
     <div class="row">
         <div class="col-md-12">
             <ul style="list-style-type:none;">
+                <li style="float: left;padding-top:1%;">友情链接：</li>
                 <{link num=10}>
                 <{foreach from=$link_data item=v}>
                     <!--<div class="apply_img"><a href="<{$v.url}>"><img src="<{$v.img}>" /><{$v.name}></a></div>-->
-                    <li style="float: left;margin-right: 5px;"><a href="<{$v.url}>" target="_blank"><img src="<{$v.img}>" /></a></li>
+                    <li style="float: left;"><a href="<{$v.url}>" target="_blank"><img src="<{$v.img}>" /></a></li>
                 <{/foreach}>
             </ul>
         </div>
